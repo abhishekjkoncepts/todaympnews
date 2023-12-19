@@ -90,14 +90,14 @@ const FullNews = () => {
                 component="img"
                 sx={{
                   width: {
-                    xs: "15px",
-                    sm: "15px",
+                    xs: "0px",
+                    sm: "0px",
                     md: "23px",
                     lg: "23px",
                   },
                   height: {
-                    xs: "15px",
-                    sm: "15px",
+                    xs: "0px",
+                    sm: "0px",
                     md: "23px",
                     lg: "23px",
                   },
@@ -110,7 +110,7 @@ const FullNews = () => {
               <Typography
                 sx={{
                   color: "#D2122E",
-                  fontSize: { xs: "23px", sm: "23px", md: "27px", lg: "27px" },
+                  fontSize: { xs: "25px", sm: "25px", md: "27px", lg: "27px" },
                   fontFamily: " 'Mukta', sans-serif",
                   fontWeight: "600",
                   textAlign: "justify",
@@ -316,7 +316,7 @@ const FullNews = () => {
               <Typography
                 sx={{
                   // marginTop: "10px",
-                  fontSize: "19px",
+                  fontSize: { xs: "14px", sm: "14px", md: "19px", lg: "19px" },
                   backgroundColor: "#fff",
                   // fontFamily: "'Noto Sans', sans-serif",
                   fontFamily: " 'Mukta', sans-serif",
