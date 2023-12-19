@@ -369,8 +369,8 @@ const Home = () => {
                   <Typography
                     sx={{
                       fontSize: {
-                        xs: "15px",
-                        sm: "15px",
+                        xs: "17px",
+                        sm: "17px",
                         md: "20px",
                         lg: "20px",
                       },
@@ -642,8 +642,8 @@ const Home = () => {
                   <Typography
                     sx={{
                       fontSize: {
-                        xs: "15px",
-                        sm: "15px",
+                        xs: "17px",
+                        sm: "17px",
                         md: "20px",
                         lg: "20px",
                       },
@@ -917,8 +917,8 @@ const Home = () => {
                   <Typography
                     sx={{
                       fontSize: {
-                        xs: "15px",
-                        sm: "15px",
+                        xs: "17px",
+                        sm: "17px",
                         md: "20px",
                         lg: "20px",
                       },
