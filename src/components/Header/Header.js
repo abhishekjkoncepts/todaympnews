@@ -149,10 +149,10 @@ function Header(props) {
               variant="h6"
               component="div"
               sx={{
-                fontSize: {xs:"20px" , sm:"20px" , md:"30px" , lg:"30px"},
+                fontSize: {xs:"25px" , sm:"25px" , md:"30px" , lg:"30px"},
                 fontFamily: "'Mukta', sans-serif",
                 fontWeight: "600",
-                marginLeft: {xs:"45px" , sm:"45px" , md:"43px" , lg:"43px"},
+                marginLeft: {xs:"55px" , sm:"55px" , md:"43px" , lg:"43px"},
               }}
             >
               आज का समाचार
