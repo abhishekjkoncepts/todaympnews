@@ -28,36 +28,39 @@ import Congressnews from "../pages/HomePageCategories/CongressNews/Congressnews"
 import Sportsnews from "../pages/HomePageCategories/SportsNews/Sportsnews";
 import ElectionsSubcategory from "../pages/SubCategory/Electionsubcategory";
 
+// SCROLL-TO-TOP
+import Scrolltotop from "../pages/ScrollToTop/Scrolltotop";
 
 const Navigation = () => {
   return (
     <BrowserRouter>
       <Header />
-      <Routes>
-        {/* PARENT PAGES */}
-        <Route path="/" element={<Home />} />
-        <Route path="/breaking-news" element={<Breakingnews />} />
-        <Route path="/elections" element={<Elections />} />
-        <Route path="/sports" element={<Sports />} />
-        <Route path="/education" element={<Education />} />
-        <Route path="/technology" element={<Technology />} />
-        <Route path="/entertainment" element={<Entertainment />} />
-        <Route path="/health" element={<Health />} />
-        <Route path="*" element={<Wrongurl />} />
+      <Scrolltotop>
+        <Routes>
+          {/* PARENT PAGES */}
+          <Route path="/" element={<Home />} />
+          <Route path="/breaking-news" element={<Breakingnews />} />
+          <Route path="/elections" element={<Elections />} />
+          <Route path="/sports" element={<Sports />} />
+          <Route path="/education" element={<Education />} />
+          <Route path="/technology" element={<Technology />} />
+          <Route path="/entertainment" element={<Entertainment />} />
+          <Route path="/health" element={<Health />} />
+          <Route path="*" element={<Wrongurl />} />
 
-        {/* FRONT PAGE CATEGORIES */}
-        <Route path="/all-news" element={<Allnews />} />
-        <Route path="/bjp" element={<Bjpnews />} />
-        <Route path="/congress" element={<Congressnews />} />
-        <Route path="/sports-news" element={<Sportsnews />} />
+          {/* FRONT PAGE CATEGORIES */}
+          <Route path="/all-news" element={<Allnews />} />
+          <Route path="/bjp" element={<Bjpnews />} />
+          <Route path="/congress" element={<Congressnews />} />
+          <Route path="/sports-news" element={<Sportsnews />} />
 
-        {/* FULL NEWS */}
-        <Route path="/:param1?/:param2?/:param3?" element={<Fullnews/>} />
+          {/* FULL NEWS */}
+          <Route path="/:param1?/:param2?/:param3?" element={<Fullnews />} />
 
-        {/* SUB CATEGORY PAGE */}
-        <Route path="/election/:param1?" element={<ElectionsSubcategory/>}/>
-        
-      </Routes>
+          {/* SUB CATEGORY PAGE */}
+          <Route path="/election/:param1?" element={<ElectionsSubcategory />} />
+        </Routes>
+      </Scrolltotop>
     </BrowserRouter>
   );
 };

@@ -13,9 +13,12 @@ import {
 import "./HomeCard.css";
 
 const HomeCard = ({ result, onClick }) => {
+
   function createMarkup(htmlContent) {
     return { __html: htmlContent };
   }
+
+  
   return (
     <>
       <Grid item xs={12} sm={12} md={4} lg={4}>

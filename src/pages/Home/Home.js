@@ -855,6 +855,9 @@ const Home = () => {
                           md: "200px",
                           lg: "200px",
                         },
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
                       }}
                       alt="redTriangleArrow"
                       src={panchang}
