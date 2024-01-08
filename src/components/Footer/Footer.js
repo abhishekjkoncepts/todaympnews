@@ -40,16 +40,16 @@ function Footer() {
                 <Instagram />
               </Link>
 
-              <Link href="https://www.twitter.com/" color="inherit">
+              {/* <Link href="https://www.twitter.com/" color="inherit">
                 <Twitter />
-              </Link>
+              </Link> */}
             </Box>
           </Grid>
 
           <Grid item xs={12}>
 
             <Typography variant="body2" color="text.secondary" align="center" sx={{ paddingTop: "10px" }}>
-              {"© 2023 Todaympnews | All Rights Reserved "}
+              {"© Todaympnews | All Rights Reserved "}
               <Link color="inherit" style={{ textDecoration: "none" }} href="https://www.todaympnews.com/">
     
               </Link>

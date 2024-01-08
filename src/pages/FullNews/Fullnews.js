@@ -162,21 +162,9 @@ const FullNews = () => {
               width: "800px",
               alignItems: "center",
               // backgroundColor: "aqua",
-              // marginTop:"10px"
             }}
           >
             {/* IMAGE */}
-
-            {/* <Box>
-              <img
-                src={FullArticle?.photo}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                  width: "100%",
-                }}
-              />
-            </Box> */}
             <Box>
               <Box
                 component="img"
@@ -184,8 +172,8 @@ const FullNews = () => {
                   width: {
                     xs: "100%",
                     sm: "100%",
-                    md: "70%",
-                    lg: "70%",
+                    md: "100%",
+                    lg: "100%",
                   },
                   height: {
                     xs: "100%",
@@ -308,15 +296,15 @@ const FullNews = () => {
             item
             xs={12}
             sm={12}
-            md={10.7}
-            lg={10.7}
+            md={8.5}
+            lg={8.5}
             // sx={{ backgroundColor: "aqua" }}
           >
             <Box>
               <Typography
                 sx={{
                   // marginTop: "10px",
-                  fontSize: { xs: "14px", sm: "14px", md: "19px", lg: "19px" },
+                  fontSize: { xs: "16px", sm: "16px", md: "19px", lg: "19px" },
                   backgroundColor: "#fff",
                   // fontFamily: "'Noto Sans', sans-serif",
                   fontFamily: " 'Mukta', sans-serif",
@@ -334,8 +322,8 @@ const FullNews = () => {
             item
             xs={12}
             sm={12}
-            md={0.7}
-            lg={0.7}
+            md={2.9}
+            lg={2.9}
             // sx={{ backgroundColor: "green" }}
           ></Grid>
         </Grid>

@@ -33,7 +33,7 @@ const navItems = [
   },
   {
     to: "/elections",
-    name: "चुनाव 2023",
+    name: "चुनाव 2024",
   },
   {
     to: "/sports",

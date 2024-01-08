@@ -52,7 +52,7 @@ const Breakingnewstitle = () => {
               paddingRight: { xs: "5px", sm: "5px", md: "0px", lg: "0px" },
             }}
           >
-            <Link to="/breakingnews" style={{ textDecoration: "none" }}>
+            <Link to="/breaking-news" style={{ textDecoration: "none" }}>
               <Box
                 sx={{
                   height: "auto",
