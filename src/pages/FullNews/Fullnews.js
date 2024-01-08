@@ -312,8 +312,8 @@ const FullNews = () => {
 
                   fontWeight: "500",
                   textAlign: "justify",
-                  paddingLeft: { xs: "5px", sm: "5px", md: "0px", lg: "0px" },
-                  paddingRight: { xs: "5px", sm: "5px", md: "0px", lg: "0px" },
+                  paddingLeft: { xs: "7px", sm: "7px", md: "0px", lg: "0px" },
+                  paddingRight: { xs: "7px", sm: "7px", md: "0px", lg: "0px" },
                 }}
                 dangerouslySetInnerHTML={createMarkup(FullArticle?.description)}
               />
