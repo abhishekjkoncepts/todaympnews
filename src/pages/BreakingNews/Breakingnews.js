@@ -63,7 +63,7 @@ const Breakingnews = () => {
                   >
                     <Typography
                       sx={{
-                        fontSize:{ xs:"14px" , sm:"14px" , md:"17px" , lg:"17px"} ,
+                        fontSize:{ xs:"16px" , sm:"16px" , md:"17px" , lg:"17px"} ,
                         fontWeight: "600",
                         marginTop: "2px",
                         marginLeft:{ xs:"5px" , sm:"5px" , md:"0px" , lg:"0px"} ,
