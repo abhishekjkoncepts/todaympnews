@@ -32,7 +32,7 @@ function Footer() {
                 Follow Us
               </Typography>
 
-              <Link href="https://www.facebook.com/" color="inherit">
+              <Link href="https://www.facebook.com/ajkasmachar/" color="inherit">
                 <Facebook />
               </Link>
 
