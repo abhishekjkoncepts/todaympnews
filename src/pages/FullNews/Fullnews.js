@@ -305,7 +305,7 @@ const FullNews = () => {
               <Typography
                 sx={{
                   // marginTop: "10px",
-                  fontSize: { xs: "16px", sm: "16px", md: "19px", lg: "19px" },
+                  fontSize: { xs: "17px", sm: "17px", md: "19px", lg: "19px" },
                   backgroundColor: "#fff",
                   // fontFamily: "'Noto Sans', sans-serif",
                   fontFamily: " 'Mukta', sans-serif",
