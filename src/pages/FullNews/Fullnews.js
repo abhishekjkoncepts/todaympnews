@@ -115,7 +115,8 @@ const FullNews = () => {
                   fontWeight: "600",
                   textAlign: "justify",
                   marginTop: { xs: "3px", sm: "3px", md: "0px", lg: "0px" },
-                  paddingLeft: { xs: "3px", sm: "3px", md: "5px", lg: "5px" },
+                  paddingLeft: { xs: "5px", sm: "5px", md: "5px", lg: "5px" },
+                  paddingRight: { xs: "5px", sm: "5px", md: "5px", lg: "5px" },
                   // wordSpacing: "-1px"
                   lineHeight: { xs: "1.2", sm: "1.2" },
                   paddingTop: "3px",
