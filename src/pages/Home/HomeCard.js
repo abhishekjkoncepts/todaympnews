@@ -43,6 +43,7 @@ const HomeCard = ({ result, onClick }) => {
                     WebkitLineClamp: 2,
                     color: "#D2122E",
                     fontSize: "16px",
+                    fontSize: {xs:"16px" , sm:"16px" , md:"17px" , lg:"17px"},
                     fontFamily:" 'Mukta', sans-serif",
                     fontWeight: "600",
                     // textAlign: "justify",
@@ -59,7 +60,7 @@ const HomeCard = ({ result, onClick }) => {
                     WebkitBoxOrient: "vertical",
                     WebkitLineClamp: 3,
                     color: "black",
-                    fontSize: "14px",
+                    fontSize: {xs:"16px" , sm:"16px" , md:"16px" , lg:"16px"},
                     fontWeight: "500",
                     fontFamily:" 'Mukta', sans-serif",
                     // textAlign: "justify"
