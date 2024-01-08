@@ -36,7 +36,7 @@ function Footer() {
                 <Facebook />
               </Link>
 
-              <Link href="https://www.instagram.com/" color="inherit" >
+              <Link href="https://www.instagram.com/ajkasamachar/" color="inherit" >
                 <Instagram />
               </Link>
 
