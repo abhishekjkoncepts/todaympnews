@@ -32,13 +32,13 @@ function Footer() {
                 Follow Us
               </Typography>
 
-              <Link href="https://www.facebook.com/ajkasmachar/" color="inherit">
+              <a href="https://www.facebook.com/ajkasmachar/"  target="_blank" color="inherit">
                 <Facebook />
-              </Link>
+              </a>
 
-              <Link href="https://www.instagram.com/ajkasamachar/" color="inherit" >
+              <a href="https://www.instagram.com/ajkasamachar/" color="inherit"   target="_blank">
                 <Instagram />
-              </Link>
+              </a>
 
               {/* <Link href="https://www.twitter.com/" color="inherit">
                 <Twitter />
