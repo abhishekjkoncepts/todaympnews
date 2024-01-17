@@ -22,7 +22,7 @@ const HomeCard = ({ result, onClick }) => {
   return (
     <>
       <Grid item xs={12} sm={12} md={4} lg={4}>
-        <Card variant="outlined">
+        <Card variant="outlined" sx={{ border:"1px solid #D2122E"}}>
           <CardActionArea onClick={onClick}>
             <Box>
               <CardMedia
