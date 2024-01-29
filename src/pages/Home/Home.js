@@ -150,7 +150,7 @@ const Home = () => {
                   </Box>
                 </Box>
 
-                <Button variant="text" disableRipple={true} sx={{ backgroundColor: "transparent" }} >
+                <Button variant="text"s x={{ backgroundColor: "transparent" }} >
                   <Link to={"/all-news"} style={{ textDecoration: "none" }}>
                     <Typography
                       sx={{
