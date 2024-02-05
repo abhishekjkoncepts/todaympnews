@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 // REDUX
-import { getArticles } from "../../redux/actions/Home";
+import { getArticles, getRelatedArticle } from "../../redux/actions/Home";
 import { useSelector } from "react-redux";
 
 // REACT HELMET
@@ -19,6 +19,7 @@ import HomeCard from "./HomeCard";
 import Homepagecarousel from "../Carousels/Homepagecarousel/Homepagecarousel";
 import Breakingnewstitle from "../BreakingNewsTitle/Breakingnewstitle";
 
+
 // CSS
 import "./Home.css";
 
@@ -27,6 +28,7 @@ import RedTriangle from "../../assets/images/RedTriangle.png";
 import JanusAdd from "../../assets/images/Janus.jpg";
 import UttrakhandAdd from "../../assets/images/Uttarakhand.jpg";
 import panchang from "../../assets/images/panchang.jpg";
+// import JanusAdd from "../../assets/images/JanusAdd.jpeg"
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -251,6 +253,7 @@ const Home = () => {
               lg={2.5}
               // sx={{ backgroundColor: "green" }}
             >
+              
               <Box sx={{ display: "flex", justifyContent: "center" }}>
                 <a
                   href="www.januskoncpets.com"
@@ -261,8 +264,7 @@ const Home = () => {
                   <Box
                     sx={{
                       backgroundColor: "#F0F0F0",
-                      height: "200px",
-                      width: "200px",
+
                       marginTop: {
                         xs: "10px",
                         sm: "10px",
@@ -509,6 +511,7 @@ const Home = () => {
                               `/${result?.category[0]}/${result?.subcategory[0]}/${result?.engtitle}`,
                               { state: { data: result } }
                             );
+                            
                           }}
                         />
                       )

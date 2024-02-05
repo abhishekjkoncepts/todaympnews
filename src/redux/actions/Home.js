@@ -1,7 +1,7 @@
 import types from "../types";
 import store from "../store";
 import { apiGet } from "../../services/api"
-import { GET_ARTICLES, GET_ARTICLE_BY_ID } from "../../services/urls"
+import { GET_ARTICLES, GET_ARTICLE_BY_ID , GET_RELATED_ARTICLES } from "../../services/urls"
 
 
 const { dispatch } = store
@@ -23,5 +23,16 @@ export async function getArticleById(id) {
     dispatch({
         type: types.GET_ARTICLE_BY_ID,
         payload: responseJson
-    })
+    });
+    return responseJson;
 };
+
+export async function getRelatedArticle(id){
+    const res = await fetch( `${GET_RELATED_ARTICLES}/${id}`);
+    const responseJson = await res.json();
+    console.log("get related artclies",responseJson);
+    dispatch({
+        type: types.GET_RELATED_ARTICLES,
+        payload: responseJson
+    })
+}

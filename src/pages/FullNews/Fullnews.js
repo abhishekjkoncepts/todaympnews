@@ -11,9 +11,10 @@ import "./Fullnews.css";
 
 // REACT-ROUTER-DOM
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 // REDUX
-import { getArticleById } from "../../redux/actions/Home";
+import { getArticleById, getRelatedArticle } from "../../redux/actions/Home";
 import { useSelector } from "react-redux";
 
 // IMAGES
@@ -27,13 +28,16 @@ function createMarkup(htmlContent) {
 const FullNews = () => {
   const { param3 } = useParams();
   const FullArticle = useSelector((state) => state.HomeReducer.FullArticle);
-
+  const RelatedArticles = useSelector((state) => state.HomeReducer.Related);
   useEffect(() => {
-    console.log(param3);
     // getArticleById(param3)
-    getArticleById(param3);
-  }, []);
+    getArticleById(param3).then((res) => {
+      getRelatedArticle(res?._id);
+    });
+    console.log("RELATED ARTICLES", RelatedArticles);
+  }, [param3, RelatedArticles]);
 
+  const navigate = useNavigate();
   return (
     <>
       <Helmet>
@@ -313,7 +317,12 @@ const FullNews = () => {
                   fontWeight: "500",
                   textAlign: "justify",
                   paddingLeft: { xs: "10px", sm: "10px", md: "0px", lg: "0px" },
-                  paddingRight: { xs: "10px", sm: "10px", md: "0px", lg: "0px" },
+                  paddingRight: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "0px",
+                    lg: "0px",
+                  },
                 }}
                 dangerouslySetInnerHTML={createMarkup(FullArticle?.description)}
               />
@@ -326,7 +335,124 @@ const FullNews = () => {
             md={2.9}
             lg={2.9}
             // sx={{ backgroundColor: "green" }}
-          ></Grid>
+          >
+            {/* <Typography sx={{color:"#000"}}>{JSON.stringify(RelatedArticles[0])}</Typography> */}
+          </Grid>
+        </Grid>
+
+        {/* <Grid container>{JSON.stringify(RelatedArticles)}</Grid> */}
+
+        <Grid container>
+          <Grid item xs={12} sm={12} md={0.6} lg={0.6}></Grid>
+          <Grid item xs={12} sm={12} md={8.5} lg={8.5}>
+            <Grid container spacing={5}>
+              {RelatedArticles?.map(
+                (item, index) =>
+                  index < 8 && (
+                    <Grid
+                      item
+                      xs={12}
+                      sm={12}
+                      md={2}
+                      lg={2}
+                      onClick={() => {
+                        console.log("navigate", item);
+                        navigate(
+                          `/${item?.category[0]}/${item?.subcategory[0]}/${item?.engtitle}`,
+                          { state: { data: item } }
+                        );
+                        window.location.reload();
+                      }}
+                      sx={{
+                        paddingLeft: {
+                          xs: "10px",
+                          sm: "10px",
+                          md: "0px",
+                          lg: "0px",
+                        },
+                        paddingRight: {
+                          xs: "10px",
+                          sm: "10px",
+                          md: "0px",
+                          lg: "0px",
+                        },
+                        marginBottom:{
+                              xs: "10px",
+                              sm: "10px",
+                              md: "60px",
+                              lg: "60px",
+                            }
+                        // backgroundColor:"grey"
+
+                      }}
+                    >
+                      <Box
+                        sx={{
+                        
+                          display: "flex",
+                          flexDirection: "column",
+                          cursor: "pointer",
+                         width: {
+                              xs: "100%",
+                              sm: "100%",
+                              md: "100%",
+                              lg: "100%",
+                            },
+                          alignItems:{
+                            xs: "center",
+                              sm: "center",
+                              md: "none",
+                              lg: "none",
+                          }
+                        }}
+                      >
+                        <Box
+                          component="img"
+                          sx={{
+                            width: {
+                              xs: "80%",
+                              sm: "80%",
+                              md: "100%",
+                              lg: "100%",
+                            },
+                            height: {
+                              xs: "100px",
+                              sm: "100px",
+                              md: "100px",
+                              lg: "100px",
+                            },
+                           
+
+                          }}
+                          src={item?.photo}
+                        />
+                        <Box>
+                          <Typography
+                            sx={{
+                              fontFamily: " 'Mukta', sans-serif",
+
+                              fontWeight: "500",
+                              fontSize: {
+                                xs: "12px",
+                                sm: "12px",
+                                md: "14px",
+                                lg: "14px",
+                              },
+                              color: "#000",
+
+                           
+                            }}
+                          >
+                            {item?.title}
+                          </Typography>
+                        </Box>
+                      </Box>
+                    </Grid>
+                  )
+              )}
+            </Grid>
+          </Grid>
+          <Grid item xs={12} sm={12} md={2.9} lg={2.9}></Grid>
         </Grid>
       </Box>
     </>
@@ -334,22 +460,3 @@ const FullNews = () => {
 };
 
 export default FullNews;
-
-{
-  /* <Box>
-              <Typography
-                style={{
-                  marginTop: "10px",
-                  fontSize: "19px",
-                  backgroundColor: "#fff",
-                  // fontFamily: "'Noto Sans', sans-serif",
-                  fontFamily: " 'Mukta', sans-serif",
-
-                  fontWeight: "500",
-                  textAlign: "justify",
-                  padding: "10px",
-                }}
-                dangerouslySetInnerHTML={createMarkup(FullArticle?.description)}
-              />
-            </Box> */
-}
