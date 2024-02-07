@@ -1,10 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, Suspense, lazy } from "react";
 
 // MATERIAL-UI
 import { Typography, Grid, Box } from "@mui/material";
 
 // REACT-HELMET
 import { Helmet } from "react-helmet";
+
+// CARD
+import { CardActionArea, CardMedia, CardContent, Card } from "@mui/material";
 
 // CSS
 import "./Fullnews.css";
@@ -21,6 +24,9 @@ import { useSelector } from "react-redux";
 import JanusAdd from "../../assets/images/Janus.jpg";
 import R2 from "../../assets/images/R2.png";
 
+// LAZY-LOAD
+import LazyLoad from "react-lazyload";
+
 function createMarkup(htmlContent) {
   return { __html: htmlContent };
 }
@@ -29,6 +35,15 @@ const FullNews = () => {
   const { param3 } = useParams();
   const FullArticle = useSelector((state) => state.HomeReducer.FullArticle);
   const RelatedArticles = useSelector((state) => state.HomeReducer.Related);
+
+  // const handleScroll = () => {
+  //   const { scrollTop, clientHeight, scrollHeight } = document.documentElement || document.body;
+
+  //   if (scrollTop + clientHeight >= scrollHeight - 100) {
+      
+  //   }
+  // };
+
   useEffect(() => {
     // getArticleById(param3)
     getArticleById(param3).then((res) => {
@@ -36,6 +51,13 @@ const FullNews = () => {
     });
     console.log("RELATED ARTICLES", RelatedArticles);
   }, [param3, RelatedArticles]);
+
+  // useEffect(() => {
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
 
   const navigate = useNavigate();
   return (
@@ -340,120 +362,153 @@ const FullNews = () => {
           </Grid>
         </Grid>
 
-        {/* <Grid container>{JSON.stringify(RelatedArticles)}</Grid> */}
-
         <Grid container>
           <Grid item xs={12} sm={12} md={0.6} lg={0.6}></Grid>
           <Grid item xs={12} sm={12} md={8.5} lg={8.5}>
-            <Grid container spacing={5}>
-              {RelatedArticles?.map(
-                (item, index) =>
-                  index < 8 && (
-                    <Grid
-                      item
-                      xs={12}
-                      sm={12}
-                      md={2}
-                      lg={2}
-                      onClick={() => {
-                        console.log("navigate", item);
-                        navigate(
-                          `/${item?.category[0]}/${item?.subcategory[0]}/${item?.engtitle}`,
-                          { state: { data: item } }
-                        );
-                        window.location.reload();
-                      }}
-                      sx={{
-                        paddingLeft: {
-                          xs: "10px",
-                          sm: "10px",
-                          md: "0px",
-                          lg: "0px",
-                        },
-                        paddingRight: {
-                          xs: "10px",
-                          sm: "10px",
-                          md: "0px",
-                          lg: "0px",
-                        },
-                        marginBottom:{
-                              xs: "10px",
-                              sm: "10px",
-                              md: "60px",
-                              lg: "60px",
-                            }
-                        // backgroundColor:"grey"
-
-                      }}
-                    >
-                      <Box
-                        sx={{
-                        
-                          display: "flex",
-                          flexDirection: "column",
-                          cursor: "pointer",
-                         width: {
-                              xs: "100%",
-                              sm: "100%",
-                              md: "100%",
-                              lg: "100%",
-                            },
-                          alignItems:{
-                            xs: "center",
-                              sm: "center",
-                              md: "none",
-                              lg: "none",
-                          }
-                        }}
-                      >
-                        <Box
-                          component="img"
-                          sx={{
-                            width: {
-                              xs: "80%",
-                              sm: "80%",
-                              md: "100%",
-                              lg: "100%",
-                            },
-                            height: {
-                              xs: "100px",
-                              sm: "100px",
-                              md: "100px",
-                              lg: "100px",
-                            },
-                           
-
-                          }}
-                          src={item?.photo}
-                        />
-                        <Box>
-                          <Typography
-                            sx={{
-                              fontFamily: " 'Mukta', sans-serif",
-
-                              fontWeight: "500",
-                              fontSize: {
-                                xs: "12px",
-                                sm: "12px",
-                                md: "14px",
-                                lg: "14px",
-                              },
-                              color: "#000",
-
-                           
-                            }}
-                          >
-                            {item?.title}
-                          </Typography>
-                        </Box>
-                      </Box>
-                    </Grid>
-                  )
-              )}
-            </Grid>
+            <Typography
+              sx={{
+                color: "#D2122E",
+                fontSize: {
+                  xs: "16px",
+                  sm: "16px",
+                  md: "20px",
+                  lg: "20px",
+                },
+                fontFamily: " 'Mukta', sans-serif",
+                fontWeight: "600",
+                marginBottom: {
+                  xs: "10px",
+                  sm: "10px",
+                  md: "10px",
+                  lg: "10px",
+                },
+                paddingLeft: {
+                  xs: "10px",
+                  sm: "10px",
+                  md: "0px",
+                  lg: "0px",
+                },
+              }}
+            >
+              संबंधित लेख...
+            </Typography>
           </Grid>
           <Grid item xs={12} sm={12} md={2.9} lg={2.9}></Grid>
         </Grid>
+
+        <LazyLoad>
+          <Grid container>
+            <Grid item xs={12} sm={12} md={0.6} lg={0.6}></Grid>
+            <Grid item xs={12} sm={12} md={8.5} lg={8.5}>
+              <Grid container spacing={3}>
+                {RelatedArticles?.map((item, index) => (
+                  <Grid
+                    item
+                    xs={12}
+                    sm={12}
+                    md={4}
+                    lg={4}
+                    onClick={() => {
+                      console.log("navigate", item);
+                      navigate(
+                        `/${item?.category[0]}/${item?.subcategory[0]}/${item?.engtitle}`,
+                        { state: { data: item } }
+                      );
+                      window.location.reload();
+                    }}
+                    sx={{
+                      paddingLeft: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "0px",
+                        lg: "0px",
+                      },
+                      paddingRight: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "0px",
+                        lg: "0px",
+                      },
+                      marginBottom: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "10px",
+                        lg: "10px",
+                      },
+                      // backgroundColor:"grey"
+                    }}
+                  >
+                    <Card
+                      variant="outlined"
+                      sx={{ border: "1px solid #D2122E" }}
+                    >
+                      <CardActionArea>
+                        <Box>
+                          <CardMedia
+                            component="img"
+                            height="160"
+                            image={item?.photo}
+                            alt="Main Image"
+                          />
+                        </Box>
+                        <CardContent>
+                          <Box sx={{}}>
+                            <Typography
+                              gutterBottom
+                              sx={{
+                                display: "-webkit-box",
+                                overflow: "hidden",
+                                WebkitBoxOrient: "vertical",
+                                WebkitLineClamp: 2,
+                                color: "#D2122E",
+                                fontSize: "16px",
+                                fontSize: {
+                                  xs: "16px",
+                                  sm: "16px",
+                                  md: "17px",
+                                  lg: "17px",
+                                },
+                                fontFamily: " 'Mukta', sans-serif",
+                                fontWeight: "600",
+                                // textAlign: "justify",
+                                wordSpacing: "1px",
+                              }}
+                            >
+                              {item?.title}
+                            </Typography>
+                            <Typography
+                              color="text.secondary"
+                              sx={{
+                                display: "-webkit-box",
+                                overflow: "hidden",
+                                WebkitBoxOrient: "vertical",
+                                WebkitLineClamp: 3,
+                                color: "black",
+                                fontSize: {
+                                  xs: "16px",
+                                  sm: "16px",
+                                  md: "16px",
+                                  lg: "16px",
+                                },
+                                fontWeight: "500",
+                                fontFamily: " 'Mukta', sans-serif",
+                                // textAlign: "justify"
+                              }}
+                              dangerouslySetInnerHTML={createMarkup(
+                                item?.description
+                              )}
+                            />
+                          </Box>
+                        </CardContent>
+                      </CardActionArea>
+                    </Card>
+                  </Grid>
+                ))}
+              </Grid>
+            </Grid>
+            <Grid item xs={12} sm={12} md={2.9} lg={2.9}></Grid>
+          </Grid>
+        </LazyLoad>
       </Box>
     </>
   );

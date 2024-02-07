@@ -28,6 +28,7 @@ import RedTriangle from "../../assets/images/RedTriangle.png";
 import JanusAdd from "../../assets/images/Janus.jpg";
 import UttrakhandAdd from "../../assets/images/Uttarakhand.jpg";
 import panchang from "../../assets/images/panchang.jpg";
+import janusAdver from "../../assets/images/JanusAdvertisement.jpeg"
 // import JanusAdd from "../../assets/images/JanusAdd.jpeg"
 
 const Home = () => {
@@ -302,18 +303,18 @@ const Home = () => {
                         width: {
                           xs: "200px",
                           sm: "200px",
-                          md: "200px",
-                          lg: "200px",
+                          md: "100%",
+                          lg: "100%",
                         },
                         height: {
                           xs: "200px",
                           sm: "200px",
-                          md: "200px",
-                          lg: "200px",
+                          md: "100%",
+                          lg: "100%",
                         },
                       }}
                       alt="redTriangleArrow"
-                      src={JanusAdd}
+                      src={janusAdver}
                     />
                   </Box>
                 </a>
