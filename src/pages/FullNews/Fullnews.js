@@ -40,7 +40,7 @@ const FullNews = () => {
   //   const { scrollTop, clientHeight, scrollHeight } = document.documentElement || document.body;
 
   //   if (scrollTop + clientHeight >= scrollHeight - 100) {
-      
+
   //   }
   // };
 
@@ -365,33 +365,63 @@ const FullNews = () => {
         <Grid container>
           <Grid item xs={12} sm={12} md={0.6} lg={0.6}></Grid>
           <Grid item xs={12} sm={12} md={8.5} lg={8.5}>
-            <Typography
+            <Box
               sx={{
-                color: "#D2122E",
-                fontSize: {
-                  xs: "16px",
-                  sm: "16px",
-                  md: "20px",
-                  lg: "20px",
-                },
-                fontFamily: " 'Mukta', sans-serif",
-                fontWeight: "600",
-                marginBottom: {
-                  xs: "10px",
-                  sm: "10px",
-                  md: "10px",
-                  lg: "10px",
-                },
-                paddingLeft: {
-                  xs: "10px",
-                  sm: "10px",
-                  md: "0px",
-                  lg: "0px",
-                },
+                display: "flex",
+                flexDirection: "row",
+                paddingLeft: { xs: "5px", sm: "5px", md: "0px", lg: "0px" },
+                paddingRight: { xs: "5px", sm: "5px", md: "0px", lg: "0px" },
+                height: "auto",
               }}
             >
-              संबंधित लेख...
-            </Typography>
+              <Box
+                component="img"
+                sx={{
+                  width: {
+                    xs: "0px",
+                    sm: "0px",
+                    md: "23px",
+                    lg: "23px",
+                  },
+                  height: {
+                    xs: "0px",
+                    sm: "0px",
+                    md: "23px",
+                    lg: "23px",
+                  },
+                  marginTop: { xs: "12px", sm: "12px", md: "9px", lg: "9px" },
+                }}
+                alt="redTriangleArrow"
+                src={R2}
+              />
+              <Typography
+                sx={{
+                  color: "#D2122E",
+                  fontSize: {
+                    xs: "25px",
+                    sm: "25px",
+                    md: "27px",
+                    lg: "27px",
+                  },
+                  fontFamily: " 'Mukta', sans-serif",
+                  fontWeight: "600",
+                  marginBottom: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "10px",
+                    lg: "10px",
+                  },
+                  paddingLeft: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "5px",
+                    lg: "5px",
+                  },
+                }}
+              >
+                संबंधित लेख...
+              </Typography>
+            </Box>
           </Grid>
           <Grid item xs={12} sm={12} md={2.9} lg={2.9}></Grid>
         </Grid>

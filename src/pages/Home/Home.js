@@ -278,6 +278,21 @@ const Home = () => {
                         md: "0px",
                         lg: "0px",
                       },
+                      paddingLeft:{
+                        xs:"10px",
+                        sm:"10px",
+                        md:"10px",
+                        lg:"10px"
+                      },
+                      paddingRight:{
+                        xs:"10px",
+                        sm:"10px",
+                        md:"10px",
+                        lg:"10px"
+                      },
+                      
+                      
+
                     }}
                   >
                     <Box>
