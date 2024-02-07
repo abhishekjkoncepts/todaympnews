@@ -255,7 +255,21 @@ const Home = () => {
               // sx={{ backgroundColor: "green" }}
             >
               
-              <Box sx={{ display: "flex", justifyContent: "center" }}>
+              <Box sx={{ display: "flex", justifyContent: "center" , 
+                  paddingLeft:{
+                        xs:"10px",
+                        sm:"10px",
+                        md:"20px",
+                        lg:"20px"
+                      },
+                      paddingRight:{
+                        xs:"10px",
+                        sm:"10px",
+                        md:"26px",
+                        lg:"26px"
+                      },
+                      
+              }}>
                 <a
                   href="www.januskoncpets.com"
                   target="_blank"
@@ -278,19 +292,7 @@ const Home = () => {
                         md: "0px",
                         lg: "0px",
                       },
-                      paddingLeft:{
-                        xs:"10px",
-                        sm:"10px",
-                        md:"10px",
-                        lg:"10px"
-                      },
-                      paddingRight:{
-                        xs:"10px",
-                        sm:"10px",
-                        md:"10px",
-                        lg:"10px"
-                      },
-                      
+                  
                       
 
                     }}
