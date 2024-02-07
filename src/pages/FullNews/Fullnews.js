@@ -427,8 +427,8 @@ const FullNews = () => {
                   marginBottom: {
                     xs: "10px",
                     sm: "10px",
-                    md: "10px",
-                    lg: "10px",
+                    md: "30px",
+                    lg: "30px",
                   },
                   paddingLeft: {
                     xs: "10px",
@@ -438,7 +438,8 @@ const FullNews = () => {
                   },
                 }}
               >
-                संबंधित लेख...
+                {/* संबंधित लेख... */}
+                रिलेटेड न्यूज़
               </Typography>
             </Box>
           </Grid>

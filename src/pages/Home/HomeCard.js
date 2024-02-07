@@ -43,7 +43,7 @@ const HomeCard = ({ result, onClick }) => {
                     WebkitLineClamp: 2,
                     color: "#D2122E",
                     fontSize: "16px",
-                    fontSize: {xs:"16px" , sm:"16px" , md:"17px" , lg:"17px"},
+                    fontSize: {xs:"16px" , sm:"16px" , md:"19px" , lg:"19px"},
                     fontFamily:" 'Mukta', sans-serif",
                     fontWeight: "600",
                     // textAlign: "justify",
