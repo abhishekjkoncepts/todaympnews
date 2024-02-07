@@ -19,7 +19,6 @@ import HomeCard from "./HomeCard";
 import Homepagecarousel from "../Carousels/Homepagecarousel/Homepagecarousel";
 import Breakingnewstitle from "../BreakingNewsTitle/Breakingnewstitle";
 
-
 // CSS
 import "./Home.css";
 
@@ -28,8 +27,8 @@ import RedTriangle from "../../assets/images/RedTriangle.png";
 import JanusAdd from "../../assets/images/Janus.jpg";
 import UttrakhandAdd from "../../assets/images/Uttarakhand.jpg";
 import panchang from "../../assets/images/panchang.jpg";
-import janusAdver from "../../assets/images/JanusAdvertisement.jpeg"
-import geniefieAdvert from "../../assets/images/geniefieAdvertisement.jpeg"
+import janusAdver from "../../assets/images/JanusAdvertisement.jpeg";
+import geniefieAdvert from "../../assets/images/geniefieAdvertisement.jpeg";
 // import JanusAdd from "../../assets/images/JanusAdd.jpeg"
 
 const Home = () => {
@@ -154,7 +153,7 @@ const Home = () => {
                   </Box>
                 </Box>
 
-                <Button variant="text"s x={{ backgroundColor: "transparent" }} >
+                <Button variant="text" s x={{ backgroundColor: "transparent" }}>
                   <Link to={"/all-news"} style={{ textDecoration: "none" }}>
                     <Typography
                       sx={{
@@ -255,22 +254,24 @@ const Home = () => {
               lg={2.5}
               // sx={{ backgroundColor: "green" }}
             >
-              
-              <Box sx={{ display: "flex", justifyContent: "center" , 
-                  paddingLeft:{
-                        xs:"10px",
-                        sm:"10px",
-                        md:"20px",
-                        lg:"20px"
-                      },
-                      paddingRight:{
-                        xs:"10px",
-                        sm:"10px",
-                        md:"26px",
-                        lg:"26px"
-                      },
-                      
-              }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  paddingLeft: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "20px",
+                    lg: "20px",
+                  },
+                  paddingRight: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "26px",
+                    lg: "26px",
+                  },
+                }}
+              >
                 <a
                   href="https://www.januskoncepts.com"
                   // href="https://www.youtube.com/uttaranchalwasi"
@@ -294,9 +295,6 @@ const Home = () => {
                         md: "0px",
                         lg: "0px",
                       },
-                  
-                      
-
                     }}
                   >
                     <Box>
@@ -444,7 +442,11 @@ const Home = () => {
                   </Box>
                 </Box>
 
-                <Button variant="text" disableRipple={true} sx={{ backgroundColor: "transparent" }}>
+                <Button
+                  variant="text"
+                  disableRipple={true}
+                  sx={{ backgroundColor: "transparent" }}
+                >
                   <Link to={"/bjp"} style={{ textDecoration: "none" }}>
                     <Typography
                       sx={{
@@ -531,7 +533,6 @@ const Home = () => {
                               `/${result?.category[0]}/${result?.subcategory[0]}/${result?.engtitle}`,
                               { state: { data: result } }
                             );
-                            
                           }}
                         />
                       )
@@ -547,22 +548,24 @@ const Home = () => {
               lg={2.5}
               // sx={{ backgroundColor: "green" }}
             >
-
-              <Box sx={{ display: "flex", justifyContent: "center" , 
-                  paddingLeft:{
-                        xs:"10px",
-                        sm:"10px",
-                        md:"20px",
-                        lg:"20px"
-                      },
-                      paddingRight:{
-                        xs:"10px",
-                        sm:"10px",
-                        md:"26px",
-                        lg:"26px"
-                      },
-                      
-              }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  paddingLeft: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "20px",
+                    lg: "20px",
+                  },
+                  paddingRight: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "26px",
+                    lg: "26px",
+                  },
+                }}
+              >
                 <a
                   href="https://www.geniefie.com/"
                   // href="https://www.youtube.com/uttaranchalwasi"
@@ -586,9 +589,6 @@ const Home = () => {
                         md: "0px",
                         lg: "0px",
                       },
-                  
-                      
-
                     }}
                   >
                     <Box>
@@ -736,7 +736,11 @@ const Home = () => {
                   </Box>
                 </Box>
 
-                <Button variant="text" disableRipple={true} sx={{ backgroundColor: "transparent" }}>
+                <Button
+                  variant="text"
+                  disableRipple={true}
+                  sx={{ backgroundColor: "transparent" }}
+                >
                   <Link to={"/congress"} style={{ textDecoration: "none" }}>
                     <Typography
                       sx={{
@@ -838,9 +842,27 @@ const Home = () => {
               lg={2.5}
               // sx={{ backgroundColor: "green" }}
             >
-              <Box sx={{ display: "flex", justifyContent: "center" }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  paddingLeft: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "20px",
+                    lg: "20px",
+                  },
+                  paddingRight: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "26px",
+                    lg: "26px",
+                  },
+                }}
+              >
                 <a
-                  href="https://www.facebook.com/HeyGobind"
+                  href="https://www.januskoncepts.com"
+                  // href="https://www.youtube.com/uttaranchalwasi"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ textDecoration: "none" }}
@@ -848,8 +870,7 @@ const Home = () => {
                   <Box
                     sx={{
                       backgroundColor: "#F0F0F0",
-                      height: "200px",
-                      width: "200px",
+
                       marginTop: {
                         xs: "10px",
                         sm: "10px",
@@ -887,21 +908,18 @@ const Home = () => {
                         width: {
                           xs: "200px",
                           sm: "200px",
-                          md: "200px",
-                          lg: "200px",
+                          md: "100%",
+                          lg: "100%",
                         },
                         height: {
                           xs: "200px",
                           sm: "200px",
-                          md: "200px",
-                          lg: "200px",
+                          md: "100%",
+                          lg: "100%",
                         },
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
                       }}
                       alt="redTriangleArrow"
-                      src={panchang}
+                      src={janusAdver}
                     />
                   </Box>
                 </a>
@@ -1121,9 +1139,27 @@ const Home = () => {
               lg={2.5}
               // sx={{ backgroundColor: "green" }}
             >
-              <Box sx={{ display: "flex", justifyContent: "center" }}>
+               <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  paddingLeft: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "20px",
+                    lg: "20px",
+                  },
+                  paddingRight: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "26px",
+                    lg: "26px",
+                  },
+                }}
+              >
                 <a
-                  href="https://www.facebook.com/HeyGobind"
+                  href="https://www.geniefie.com/"
+                  // href="https://www.youtube.com/uttaranchalwasi"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ textDecoration: "none" }}
@@ -1131,8 +1167,7 @@ const Home = () => {
                   <Box
                     sx={{
                       backgroundColor: "#F0F0F0",
-                      height: "200px",
-                      width: "200px",
+
                       marginTop: {
                         xs: "10px",
                         sm: "10px",
@@ -1145,7 +1180,6 @@ const Home = () => {
                         md: "0px",
                         lg: "0px",
                       },
-                      textDecoration: "none",
                     }}
                   >
                     <Box>
@@ -1154,12 +1188,12 @@ const Home = () => {
                           fontSize: {
                             xs: "10px",
                             sm: "10px",
-                            md: "11px",
-                            lg: "11px",
+                            md: "9px",
+                            lg: "9px",
                           },
-                          fontWeight: "500",
+                          fontWeight: "600",
                           textAlign: "center",
-                          textDecoration: "none",
+                          color: "black",
                         }}
                       >
                         ADVERTISEMENT
@@ -1171,18 +1205,18 @@ const Home = () => {
                         width: {
                           xs: "200px",
                           sm: "200px",
-                          md: "200px",
-                          lg: "200px",
+                          md: "100%",
+                          lg: "100%",
                         },
                         height: {
                           xs: "200px",
                           sm: "200px",
-                          md: "200px",
-                          lg: "200px",
+                          md: "100%",
+                          lg: "100%",
                         },
                       }}
                       alt="redTriangleArrow"
-                      src={panchang}
+                      src={geniefieAdvert}
                     />
                   </Box>
                 </a>

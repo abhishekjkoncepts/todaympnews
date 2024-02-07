@@ -18,7 +18,7 @@ import { useSelector } from "react-redux";
 import "./Allnews.css"
 
 // Images
-import JanusAdd from "../../../assets/images/Janus.jpg"
+import janusAdver from "../../../assets/images/JanusAdvertisement.jpeg"
 
 const Allnews = () => {
   const [loading, setLoading] = useState(true);
@@ -84,7 +84,7 @@ const Allnews = () => {
           lg={2.5}
           // sx={{ backgroundColor: "green" }}
         >
-          <Box sx={{ display: "flex", justifyContent: "center" }}>
+          {/* <Box sx={{ display: "flex", justifyContent: "center" }}>
             <a
               href="https://www.facebook.com/HeyGobind"
               target="_blank"
@@ -128,22 +128,104 @@ const Allnews = () => {
                       width: {
                         xs: "200px",
                         sm: "200px",
-                        md: "200px",
-                        lg: "200px",
+                        md: "100%",
+                        lg: "100%",
                       },
                       height: {
                         xs: "200px",
                         sm: "200px",
-                        md: "200px",
-                        lg: "200px",
+                        md: "100%",
+                        lg: "100%",
                       },
                     }}
                     alt="redTriangleArrow"
-                    src={JanusAdd}
+                    src={janusAdver}
                   />
               </Box>
             </a>
-          </Box>
+          </Box> */}
+          <Box sx={{ display: "flex", justifyContent: "center" , 
+                  paddingLeft:{
+                        xs:"10px",
+                        sm:"10px",
+                        md:"20px",
+                        lg:"20px"
+                      },
+                      paddingRight:{
+                        xs:"10px",
+                        sm:"10px",
+                        md:"26px",
+                        lg:"26px"
+                      },
+                      
+              }}>
+                <a
+                  href="https://www.januskoncepts.com"
+                  // href="https://www.youtube.com/uttaranchalwasi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: "none" }}
+                >
+                  <Box
+                    sx={{
+                      backgroundColor: "#F0F0F0",
+
+                      marginTop: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "0px",
+                        lg: "0px",
+                      },
+                      marginBottom: {
+                        xs: "40px",
+                        sm: "40px",
+                        md: "0px",
+                        lg: "0px",
+                      },
+                  
+                      
+
+                    }}
+                  >
+                    <Box>
+                      <Typography
+                        sx={{
+                          fontSize: {
+                            xs: "10px",
+                            sm: "10px",
+                            md: "9px",
+                            lg: "9px",
+                          },
+                          fontWeight: "600",
+                          textAlign: "center",
+                          color: "black",
+                        }}
+                      >
+                        ADVERTISEMENT
+                      </Typography>
+                    </Box>
+                    <Box
+                      component="img"
+                      sx={{
+                        width: {
+                          xs: "200px",
+                          sm: "200px",
+                          md: "100%",
+                          lg: "100%",
+                        },
+                        height: {
+                          xs: "200px",
+                          sm: "200px",
+                          md: "100%",
+                          lg: "100%",
+                        },
+                      }}
+                      alt="redTriangleArrow"
+                      src={janusAdver}
+                    />
+                  </Box>
+                </a>
+              </Box>
         </Grid>
         <Grid
           item

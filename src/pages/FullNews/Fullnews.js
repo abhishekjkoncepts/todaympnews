@@ -23,6 +23,8 @@ import { useSelector } from "react-redux";
 // IMAGES
 import JanusAdd from "../../assets/images/Janus.jpg";
 import R2 from "../../assets/images/R2.png";
+import janusAdver from "../../assets/images/JanusAdvertisement.jpeg"
+
 
 // LAZY-LOAD
 import LazyLoad from "react-lazyload";
@@ -233,9 +235,27 @@ const FullNews = () => {
               }
             }
           >
-            <Box sx={{ display: "flex", justifyContent: "center" }}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                paddingLeft: {
+                  xs: "10px",
+                  sm: "10px",
+                  md: "20px",
+                  lg: "20px",
+                },
+                paddingRight: {
+                  xs: "10px",
+                  sm: "10px",
+                  md: "26px",
+                  lg: "26px",
+                },
+              }}
+            >
               <a
-                href="www.januskoncpets.com"
+                href="https://www.januskoncepts.com"
+                // href="https://www.youtube.com/uttaranchalwasi"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ textDecoration: "none" }}
@@ -243,8 +263,7 @@ const FullNews = () => {
                 <Box
                   sx={{
                     backgroundColor: "#F0F0F0",
-                    height: "200px",
-                    width: "200px",
+
                     marginTop: {
                       xs: "10px",
                       sm: "10px",
@@ -282,18 +301,18 @@ const FullNews = () => {
                       width: {
                         xs: "200px",
                         sm: "200px",
-                        md: "200px",
-                        lg: "200px",
+                        md: "100%",
+                        lg: "100%",
                       },
                       height: {
                         xs: "200px",
                         sm: "200px",
-                        md: "200px",
-                        lg: "200px",
+                        md: "100%",
+                        lg: "100%",
                       },
                     }}
                     alt="redTriangleArrow"
-                    src={JanusAdd}
+                    src={janusAdver }
                   />
                 </Box>
               </a>

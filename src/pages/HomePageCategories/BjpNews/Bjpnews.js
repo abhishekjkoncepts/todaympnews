@@ -19,6 +19,7 @@ import "./Bjpnews.css"
 
 // Images
 import JanusAdd from "../../../assets/images/Janus.jpg"
+import geniefieAdvert from "../../../assets/images/geniefieAdvertisement.jpeg"
 
 const Bjpnews = () => {
   const [loading, setLoading] = useState(true);
@@ -84,66 +85,88 @@ const Bjpnews = () => {
           lg={2.5}
           // sx={{ backgroundColor: "green" }}
         >
-          <Box sx={{ display: "flex", justifyContent: "center" }}>
-            <a
-              href="https://www.facebook.com/HeyGobind"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ textDecoration: "none" }}
-            >
-              <Box
+           <Box
                 sx={{
-                  backgroundColor: "#F0F0F0",
-                  height: "200px",
-                  width: "200px",
-                  marginTop: { xs: "10px", sm: "10px", md: "0px", lg: "0px" },
-                  marginBottom: {
-                    xs: "40px",
-                    sm: "40px",
-                    md: "0px",
-                    lg: "0px",
+                  display: "flex",
+                  justifyContent: "center",
+                  paddingLeft: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "20px",
+                    lg: "20px",
+                  },
+                  paddingRight: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "26px",
+                    lg: "26px",
                   },
                 }}
               >
-                <Box>
-                  <Typography
+                <a
+                  href="https://www.geniefie.com/"
+                  // href="https://www.youtube.com/uttaranchalwasi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: "none" }}
+                >
+                  <Box
                     sx={{
-                      fontSize: {
+                      backgroundColor: "#F0F0F0",
+
+                      marginTop: {
                         xs: "10px",
                         sm: "10px",
-                        md: "9px",
-                        lg: "9px",
+                        md: "0px",
+                        lg: "0px",
                       },
-                      fontWeight: "600",
-                      textAlign: "center",
-                      color: "black",
+                      marginBottom: {
+                        xs: "40px",
+                        sm: "40px",
+                        md: "0px",
+                        lg: "0px",
+                      },
                     }}
                   >
-                    ADVERTISEMENT
-                  </Typography>
-                </Box>
-                <Box
-                    component="img"
-                    sx={{
-                      width: {
-                        xs: "200px",
-                        sm: "200px",
-                        md: "200px",
-                        lg: "200px",
-                      },
-                      height: {
-                        xs: "200px",
-                        sm: "200px",
-                        md: "200px",
-                        lg: "200px",
-                      },
-                    }}
-                    alt="redTriangleArrow"
-                    src={JanusAdd}
-                  />
+                    <Box>
+                      <Typography
+                        sx={{
+                          fontSize: {
+                            xs: "10px",
+                            sm: "10px",
+                            md: "9px",
+                            lg: "9px",
+                          },
+                          fontWeight: "600",
+                          textAlign: "center",
+                          color: "black",
+                        }}
+                      >
+                        ADVERTISEMENT
+                      </Typography>
+                    </Box>
+                    <Box
+                      component="img"
+                      sx={{
+                        width: {
+                          xs: "200px",
+                          sm: "200px",
+                          md: "100%",
+                          lg: "100%",
+                        },
+                        height: {
+                          xs: "200px",
+                          sm: "200px",
+                          md: "100%",
+                          lg: "100%",
+                        },
+                      }}
+                      alt="redTriangleArrow"
+                      src={geniefieAdvert}
+                    />
+                  </Box>
+                </a>
               </Box>
-            </a>
-          </Box>
         </Grid>
         <Grid
           item

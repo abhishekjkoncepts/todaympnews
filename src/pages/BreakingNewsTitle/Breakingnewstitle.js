@@ -52,49 +52,49 @@ const Breakingnewstitle = () => {
               paddingRight: { xs: "5px", sm: "5px", md: "0px", lg: "0px" },
             }}
           >
-            <Link to="/breaking-news" style={{ textDecoration: "none" }}>
-              <Box
+            {/* <Link to="/breaking-news" style={{ textDecoration: "none" }}> */}
+            <Box
+              sx={{
+                height: "auto",
+                backgroundColor: "red",
+                margin: "0 auto",
+                borderRadius: "5px",
+                display: "flex",
+                textDecoration: "none",
+                flexDirection: "row",
+                animation: "blink 3s infinite", // Apply the animation
+              }}
+            >
+              <Typography
                 sx={{
-                  height: "auto",
-                  backgroundColor: "red",
-                  margin: "0 auto",
-                  borderRadius: "5px",
-                  display: "flex",
-                  textDecoration: "none",
-                  flexDirection: "row",
-                  animation: "blink 3s infinite", // Apply the animation
+                  fontSize: "20px",
+                  fontFamily: " 'Mukta', sans-serif",
+                  fontWeight: "600",
+                  color: "#fff",
+                  padding: "-3px",
+                  textDecoration: "none", // Remove underline
+                  marginTop: "3px",
+                  marginLeft: "20px",
+                  fontStyle: "italic",
+                  width: { xs: "45%", sm: "45%", md: "25%", lg: "25%" },
                 }}
               >
-                <Typography
-                  sx={{
-                    fontSize: "20px",
-                    fontFamily: " 'Mukta', sans-serif",
-                    fontWeight: "600",
-                    color: "#fff",
-                    padding: "-3px",
-                    textDecoration: "none", // Remove underline
-                    marginTop: "3px",
-                    marginLeft: "20px",
-                    fontStyle: "italic",
-                    width: {xs:"45%" , sm:"45%" , md:"25%" , lg:"25%"},
-                  }}
-                >
-                  ब्रेकिंग न्यूज
-                </Typography>
+                ब्रेकिंग न्यूज
+              </Typography>
 
-                <Divider
-                  sx={{
-                    width: "0.2%",
-                    marginLeft: "22px",
-                    // marginRight: "10px",
-                  }}
-                  orientation="vertical"
-                  variant="middle"
-                  flexItem
-                  style={{ backgroundColor: "#808080" }}
-                />
-                <Marquee>
-                  {Articles?.map(
+              <Divider
+                sx={{
+                  width: "0.2%",
+                  marginLeft: "22px",
+                  // marginRight: "10px",
+                }}
+                orientation="vertical"
+                variant="middle"
+                flexItem
+                style={{ backgroundColor: "#808080" }}
+              />
+              <Marquee>
+                {/* {Articles?.map(
                     (result, index) =>
                       index < 1 && (
                         <Typography
@@ -116,10 +116,55 @@ const Breakingnewstitle = () => {
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </Typography>
                       )
-                  )}
-                </Marquee>
-              </Box>
-            </Link>
+                  )} */}
+                {Articles?.map(
+                  (result, index) =>
+                    index < 1 && (
+                      <Typography
+                        key={index}
+                        result={result}
+                        onClick={() => {
+                          console.log("navigate");
+                          navigate(
+                            `/${result?.category[0]}/${result?.subcategory[0]}/${result?.engtitle}`,
+                            { state: { data: result } }
+                          );
+                        }}
+                        sx={{
+                          fontSize: "20px",
+                          fontSize: {
+                            xs: "15px",
+                            sm: "15px",
+                            md: "20px",
+                            lg: "20px",
+                          },
+                          fontWeight: "600",
+                          fontFamily: " 'Mukta', sans-serif",
+                          color: "#fff",
+                          marginLeft: {
+                            xs: "5px",
+                            sm: "5px",
+                            md: "0px",
+                            lg: "0px",
+                          },
+                          marginRight: {
+                            xs: "5px",
+                            sm: "5px",
+                            md: "0px",
+                            lg: "0px",
+                          },
+                          pointer:"cursor",
+                          cursor:"pointer"
+                        }}
+                      >
+                        {result?.title}
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      </Typography>
+                    )
+                )}
+              </Marquee>
+            </Box>
+            {/* </Link> */}
           </Box>
         </Grid>
         <Grid

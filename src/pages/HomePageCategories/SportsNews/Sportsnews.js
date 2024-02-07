@@ -15,10 +15,11 @@ import { getArticles } from "../../../redux/actions/Home";
 import { useSelector } from "react-redux";
 
 // CSS
-import "./Sportsnews.css"
+import "./Sportsnews.css";
 
 // Images
-import JanusAdd from "../../../assets/images/Janus.jpg"
+import JanusAdd from "../../../assets/images/Janus.jpg";
+import janusAdver from "../../../assets/images/JanusAdvertisement.jpeg"
 
 const Sportsnews = () => {
   const [loading, setLoading] = useState(true);
@@ -31,10 +32,13 @@ const Sportsnews = () => {
     });
   }, []);
   return (
-    <Box  style={{ marginTop: "80px" }}>
-      <Grid container  sx={{
-            marginBottom: { xs: "0px", sm: "0px", md: "15px", lg: "15px" },
-          }}>
+    <Box style={{ marginTop: "80px" }}>
+      <Grid
+        container
+        sx={{
+          marginBottom: { xs: "0px", sm: "0px", md: "15px", lg: "15px" },
+        }}
+      >
         <Grid
           item
           xs={12}
@@ -58,21 +62,21 @@ const Sportsnews = () => {
             }}
           >
             <Grid container spacing={3}>
-              {Articles?.filter((item) => item.subcategory[0] === "sports-news").map(
-                (result, index) =>(
-                    <HomeCard
-                      key={index}
-                      result={result}
-                      onClick={() => {
-                        console.log("navigate");
-                        navigate(
-                          `/${result?.category[0]}/${result?.subcategory[0]}/${result?.engtitle}`,
-                          { state: { data: result } }
-                        );
-                      }}
-                    />
-                  )
-              )}
+              {Articles?.filter(
+                (item) => item.subcategory[0] === "sports-news"
+              ).map((result, index) => (
+                <HomeCard
+                  key={index}
+                  result={result}
+                  onClick={() => {
+                    console.log("navigate");
+                    navigate(
+                      `/${result?.category[0]}/${result?.subcategory[0]}/${result?.engtitle}`,
+                      { state: { data: result } }
+                    );
+                  }}
+                />
+              ))}
             </Grid>
           </Box>
         </Grid>
@@ -84,9 +88,27 @@ const Sportsnews = () => {
           lg={2.5}
           // sx={{ backgroundColor: "green" }}
         >
-          <Box sx={{ display: "flex", justifyContent: "center" }}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              paddingLeft: {
+                xs: "10px",
+                sm: "10px",
+                md: "20px",
+                lg: "20px",
+              },
+              paddingRight: {
+                xs: "10px",
+                sm: "10px",
+                md: "26px",
+                lg: "26px",
+              },
+            }}
+          >
             <a
-              href="https://www.facebook.com/HeyGobind"
+              href="https://www.januskoncepts.com"
+              // href="https://www.youtube.com/uttaranchalwasi"
               target="_blank"
               rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
@@ -94,9 +116,13 @@ const Sportsnews = () => {
               <Box
                 sx={{
                   backgroundColor: "#F0F0F0",
-                  height: "200px",
-                  width: "200px",
-                  marginTop: { xs: "10px", sm: "10px", md: "0px", lg: "0px" },
+
+                  marginTop: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "0px",
+                    lg: "0px",
+                  },
                   marginBottom: {
                     xs: "40px",
                     sm: "40px",
@@ -123,24 +149,24 @@ const Sportsnews = () => {
                   </Typography>
                 </Box>
                 <Box
-                    component="img"
-                    sx={{
-                      width: {
-                        xs: "200px",
-                        sm: "200px",
-                        md: "200px",
-                        lg: "200px",
-                      },
-                      height: {
-                        xs: "200px",
-                        sm: "200px",
-                        md: "200px",
-                        lg: "200px",
-                      },
-                    }}
-                    alt="redTriangleArrow"
-                    src={JanusAdd}
-                  />
+                  component="img"
+                  sx={{
+                    width: {
+                      xs: "200px",
+                      sm: "200px",
+                      md: "100%",
+                      lg: "100%",
+                    },
+                    height: {
+                      xs: "200px",
+                      sm: "200px",
+                      md: "100%",
+                      lg: "100%",
+                    },
+                  }}
+                  alt="redTriangleArrow"
+                  src={janusAdver}
+                />
               </Box>
             </a>
           </Box>
