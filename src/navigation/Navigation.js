@@ -31,6 +31,9 @@ import ElectionsSubcategory from "../pages/SubCategory/Electionsubcategory";
 // SCROLL-TO-TOP
 import Scrolltotop from "../pages/ScrollToTop/Scrolltotop";
 
+// FOOTER
+import Footer from "../components/Footer/Footer";
+
 const Navigation = () => {
   return (
     <BrowserRouter>
@@ -61,6 +64,7 @@ const Navigation = () => {
           <Route path="/election/:param1?" element={<ElectionsSubcategory />} />
         </Routes>
       </Scrolltotop>
+      <Footer/>
     </BrowserRouter>
   );
 };

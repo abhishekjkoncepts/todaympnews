@@ -8,10 +8,14 @@ import {
   Twitter,
 } from "@mui/icons-material";
 
+import { useNavigate } from "react-router-dom";
+
 import instaLogo from "../../assets/images/insatIcon.png";
 import fbLogo from "../../assets/images/fbicon.png";
+import "./Footer.css";
 
 function Footer() {
+  const navigate = useNavigate();
   return (
     <Box
       sx={{
@@ -33,7 +37,7 @@ function Footer() {
 
           <Grid item xs={12}>
             <Box
-              sx={{ display: "flex", flexDirection: "row", marginTop: "8px"  }}
+              sx={{ display: "flex", flexDirection: "row", marginTop: "8px" }}
             >
               <Typography
                 variant="h6"
@@ -44,60 +48,57 @@ function Footer() {
                 Follow Us
               </Typography>
 
-              <a
-                href="https://www.facebook.com/ajkasmachar/"
-                target="_blank"
-                color="black"
-              >
-                <Box
-                  component="img"
-                  sx={{
-                    height: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "20px",
-                      lg: "20px",
-                    },
-                    width: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "20px",
-                      lg: "20px",
-                    },
-                  }}
-                  src={fbLogo}
-                />
-              </a>
+    <a
+      href="https://www.facebook.com/ajkasmachar/"
+      target="_blank"
+      color="black"
+    >
+      <Box
+        component="img"
+        sx={{
+          height: {
+            xs: "20px",
+            sm: "20px",
+            md: "20px",
+            lg: "20px",
+          },
+          width: {
+            xs: "20px",
+            sm: "20px",
+            md: "20px",
+            lg: "20px",
+          },
+        }}
+        src={fbLogo}
+      />
+    </a>
 
-              <a
-                href="https://www.instagram.com/ajkasamachar/"
-                color="black"
-                target="_blank"
-              >
-                  <Box
-                  component="img"
-                  sx={{
-                    height: {
-                      xs: "21px",
-                      sm: "21px",
-                      md: "21px",
-                      lg: "21px",
-                    },
-                    width: {
-                      xs: "21px",
-                      sm: "21px",
-                      md: "21px",
-                      lg: "21px",
-                    },
-                    marginLeft:"3px"
-                  }}
-                  src={instaLogo}
-                />
-              </a>
+    <a
+      href="https://www.instagram.com/ajkasamachar/"
+      color="black"
+      target="_blank"
+    >
+      <Box
+        component="img"
+        sx={{
+          height: {
+            xs: "21px",
+            sm: "21px",
+            md: "21px",
+            lg: "21px",
+          },
+          width: {
+            xs: "21px",
+            sm: "21px",
+            md: "21px",
+            lg: "21px",
+          },
+          marginLeft: "3px",
+        }}
+        src={instaLogo}
+      />
+    </a>
 
-              {/* <Link href="https://www.twitter.com/" color="inherit">
-                <Twitter />
-              </Link> */}
             </Box>
           </Grid>
 
@@ -120,6 +121,9 @@ function Footer() {
         </Grid>
       </Container>
     </Box>
+      
+     
+
   );
 }
 

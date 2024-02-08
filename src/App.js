@@ -9,14 +9,14 @@ import store from "./redux/store";
 
 // PAGES
 import Navigation from "./navigation/Navigation";
-import Footer from "./components/Footer/Footer";
+// import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
     <Provider store={store}>
       <Box flex={1}>
         <Navigation />
-        <Footer/>
+        {/* <Footer/> */}
       </Box>
     </Provider>
   );

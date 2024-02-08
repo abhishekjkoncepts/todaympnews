@@ -451,7 +451,7 @@ const FullNews = () => {
             <Grid item xs={12} sm={12} md={0.6} lg={0.6}></Grid>
             <Grid item xs={12} sm={12} md={8.5} lg={8.5}>
               <Grid container spacing={3}>
-                {RelatedArticles?.map((item, index) => (
+                {RelatedArticles?.data?.map((item, index) => (
                   <Grid
                     item
                     xs={12}
