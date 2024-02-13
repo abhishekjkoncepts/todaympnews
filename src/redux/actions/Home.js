@@ -30,7 +30,8 @@ export async function getArticleById(id) {
   return responseJson;
 }
 
-export async function getRelatedArticle(id, page = 1, pageSize = 20) {
+export async function getRelatedArticle(id, page = 1, pageSize = 9) {
+  console.log('PAGE DATA', page, pageSize);
   const res = await fetch(
     `${GET_RELATED_ARTICLES}/${id}?page=${page}&pageSize=${pageSize}`
   );

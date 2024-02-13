@@ -1,4 +1,4 @@
-import React, { useEffect, Suspense, lazy } from "react";
+import React, { useEffect, Suspense, lazy, useState, useCallback } from "react";
 
 // MATERIAL-UI
 import { Typography, Grid, Box } from "@mui/material";
@@ -23,8 +23,7 @@ import { useSelector } from "react-redux";
 // IMAGES
 import JanusAdd from "../../assets/images/Janus.jpg";
 import R2 from "../../assets/images/R2.png";
-import janusAdver from "../../assets/images/JanusAdvertisement.jpeg"
-
+import janusAdver from "../../assets/images/JanusAdvertisement.jpeg";
 
 // LAZY-LOAD
 import LazyLoad from "react-lazyload";
@@ -35,6 +34,10 @@ function createMarkup(htmlContent) {
 
 const FullNews = () => {
   const { param3 } = useParams();
+
+  const [ArticleId, setArticleId] = useState("");
+  const [Page, setPage] = useState(1);
+
   const FullArticle = useSelector((state) => state.HomeReducer.FullArticle);
   const RelatedArticles = useSelector((state) => state.HomeReducer.Related);
 
@@ -50,9 +53,25 @@ const FullNews = () => {
     // getArticleById(param3)
     getArticleById(param3).then((res) => {
       getRelatedArticle(res?._id);
+      setArticleId(res?._id);
     });
-    console.log("RELATED ARTICLES", RelatedArticles);
-  }, [param3, RelatedArticles]);
+  }, []);
+
+  let handleScroll = useCallback(() => {
+    if (
+      window.innerHeight + document.documentElement.scrollTop ===
+      document.documentElement.offsetHeight
+    ) {
+      // When the user reaches the bottom of the page
+      getRelatedArticle(ArticleId, RelatedArticles?.page + 1);
+    }
+  }, [ArticleId, RelatedArticles]);
+
+  useEffect(() => {
+    // Add event listener for scroll when component mounts
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
 
   // useEffect(() => {
   //   window.addEventListener('scroll', handleScroll);
@@ -312,7 +331,7 @@ const FullNews = () => {
                       },
                     }}
                     alt="redTriangleArrow"
-                    src={janusAdver }
+                    src={janusAdver}
                   />
                 </Box>
               </a>

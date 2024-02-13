@@ -534,3 +534,4 @@ const Electionpagecarousel = () => {
 };
 
 export default Electionpagecarousel;
+
