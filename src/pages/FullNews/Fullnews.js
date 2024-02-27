@@ -25,6 +25,8 @@ import JanusAdd from "../../assets/images/Janus.jpg";
 import R2 from "../../assets/images/R2.png";
 import janusAdver from "../../assets/images/JanusAdvertisement.jpeg";
 
+
+import Fullpageadvertisement from "../FullPageAdvertisement/Fullpageadvertisement";
 // LAZY-LOAD
 import LazyLoad from "react-lazyload";
 
@@ -106,24 +108,34 @@ const FullNews = () => {
       <Box
         sx={{ marginTop: { xs: "60px", sm: "60px", md: "80px", lg: "80px" } }}
       >
-        {/* TITLE */}
-        <Grid container>
+        <Grid
+          container
+          sx={{
+            // backgroundColor: "green",
+            marginTop: "10px",
+          }}
+        >
           <Grid
-            item
             xs={12}
             sm={12}
             md={0.6}
             lg={0.6}
             // sx={{ backgroundColor: "orange" }}
           ></Grid>
+
           <Grid
             item
             xs={12}
             sm={12}
-            md={10.7}
-            lg={10.7}
-            // sx={{ backgroundColor: "aqua" }}
+            md={8.5}
+            lg={8.5}
+            sx={{
+              width: "800px",
+              alignItems: "center",
+              // backgroundColor: "aqua",
+            }}
           >
+            {/* TITLE */}
             <Box
               sx={{
                 display: "flex",
@@ -173,45 +185,7 @@ const FullNews = () => {
                 {FullArticle?.title}
               </Typography>
             </Box>
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            sm={12}
-            md={0.7}
-            lg={0.7}
-            // sx={{ backgroundColor: "green" }}
-          ></Grid>
-        </Grid>
 
-        {/* IMAGE */}
-        <Grid
-          container
-          sx={{
-            // backgroundColor: "green",
-            marginTop: "10px",
-          }}
-        >
-          <Grid
-            xs={12}
-            sm={12}
-            md={0.6}
-            lg={0.6}
-            // sx={{ backgroundColor: "orange" }}
-          ></Grid>
-
-          <Grid
-            item
-            xs={12}
-            sm={12}
-            md={8.5}
-            lg={8.5}
-            sx={{
-              width: "800px",
-              alignItems: "center",
-              // backgroundColor: "aqua",
-            }}
-          >
             {/* IMAGE */}
             <Box>
               <Box
@@ -240,131 +214,8 @@ const FullNews = () => {
                 src={FullArticle?.photo}
               />
             </Box>
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            sm={12}
-            md={2.5}
-            lg={2.5}
-            sx={
-              {
-                // backgroundColor: "green",
-                // marginTop:"10px"
-              }
-            }
-          >
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                paddingLeft: {
-                  xs: "10px",
-                  sm: "10px",
-                  md: "20px",
-                  lg: "20px",
-                },
-                paddingRight: {
-                  xs: "10px",
-                  sm: "10px",
-                  md: "26px",
-                  lg: "26px",
-                },
-              }}
-            >
-              <a
-                href="https://www.januskoncepts.com"
-                // href="https://www.youtube.com/uttaranchalwasi"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ textDecoration: "none" }}
-              >
-                <Box
-                  sx={{
-                    backgroundColor: "#F0F0F0",
 
-                    marginTop: {
-                      xs: "10px",
-                      sm: "10px",
-                      md: "0px",
-                      lg: "0px",
-                    },
-                    marginBottom: {
-                      xs: "40px",
-                      sm: "40px",
-                      md: "0px",
-                      lg: "0px",
-                    },
-                  }}
-                >
-                  <Box>
-                    <Typography
-                      sx={{
-                        fontSize: {
-                          xs: "10px",
-                          sm: "10px",
-                          md: "9px",
-                          lg: "9px",
-                        },
-                        fontWeight: "600",
-                        textAlign: "center",
-                        color: "black",
-                      }}
-                    >
-                      ADVERTISEMENT
-                    </Typography>
-                  </Box>
-                  <Box
-                    component="img"
-                    sx={{
-                      width: {
-                        xs: "200px",
-                        sm: "200px",
-                        md: "100%",
-                        lg: "100%",
-                      },
-                      height: {
-                        xs: "200px",
-                        sm: "200px",
-                        md: "100%",
-                        lg: "100%",
-                      },
-                    }}
-                    alt="redTriangleArrow"
-                    src={janusAdver}
-                  />
-                </Box>
-              </a>
-            </Box>
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            sm={12}
-            md={0.4}
-            lg={0.4}
-            // sx={{ backgroundColor: "orange" }}
-          ></Grid>
-        </Grid>
-
-        {/* DESCRIPTION */}
-        <Grid container>
-          <Grid
-            item
-            xs={12}
-            sm={12}
-            md={0.6}
-            lg={0.6}
-            // sx={{ backgroundColor: "orange" }}
-          ></Grid>
-          <Grid
-            item
-            xs={12}
-            sm={12}
-            md={8.5}
-            lg={8.5}
-            // sx={{ backgroundColor: "aqua" }}
-          >
+            {/* DESCRIPTION */}
             <Box>
               <Typography
                 sx={{
@@ -387,22 +238,8 @@ const FullNews = () => {
                 dangerouslySetInnerHTML={createMarkup(FullArticle?.description)}
               />
             </Box>
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            sm={12}
-            md={2.9}
-            lg={2.9}
-            // sx={{ backgroundColor: "green" }}
-          >
-            {/* <Typography sx={{color:"#000"}}>{JSON.stringify(RelatedArticles[0])}</Typography> */}
-          </Grid>
-        </Grid>
 
-        <Grid container>
-          <Grid item xs={12} sm={12} md={0.6} lg={0.6}></Grid>
-          <Grid item xs={12} sm={12} md={8.5} lg={8.5}>
+            {/* Related Articles */}
             <Box
               sx={{
                 display: "flex",
@@ -461,12 +298,155 @@ const FullNews = () => {
                 रिलेटेड न्यूज़
               </Typography>
             </Box>
+
+            <LazyLoad>
+              <Grid container spacing={1}>
+                {RelatedArticles?.data?.map((item, index) => (
+                  <Grid
+                    item
+                    xs={12}
+                    sm={12}
+                    md={4}
+                    lg={4}
+                    onClick={() => {
+                      console.log("navigate", item);
+                      navigate(
+                        `/${item?.category[0]}/${item?.subcategory[0]}/${item?.engtitle}`,
+                        { state: { data: item } }
+                      );
+                      window.location.reload();
+                    }}
+                    sx={{
+                      paddingLeft: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "0px",
+                        lg: "0px",
+                      },
+                      paddingRight: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "0px",
+                        lg: "0px",
+                      },
+                      marginBottom: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "10px",
+                        lg: "10px",
+                      },
+                      display:"flex",
+                      justifyContent:{
+                        xs:"center",
+                        sm:"center",
+                        md:"none",
+                        lg:"none"
+                      },
+                      alignItems:{
+                        xs:"center",
+                        sm:"center",
+                        md:"none",
+                        lg:"none"
+                      }
+                      // backgroundColor:"grey"
+                    }}
+                  >
+                    <Card
+                      variant="outlined"
+                      sx={{ border: "1px solid #D2122E" }}
+                    >
+                      <CardActionArea>
+                        <Box>
+                          <CardMedia
+                            component="img"
+                            height="160"
+                            image={item?.photo}
+                            alt="Main Image"
+                          />
+                        </Box>
+                        <CardContent>
+                          <Box sx={{}}>
+                            <Typography
+                              gutterBottom
+                              sx={{
+                                display: "-webkit-box",
+                                overflow: "hidden",
+                                WebkitBoxOrient: "vertical",
+                                WebkitLineClamp: 2,
+                                color: "#D2122E",
+                                fontSize: {
+                                  xs: "16px",
+                                  sm: "16px",
+                                  md: "17px",
+                                  lg: "17px",
+                                },
+                                fontFamily: " 'Mukta', sans-serif",
+                                fontWeight: "600",
+                                // textAlign: "justify",
+                                wordSpacing: "1px",
+                              }}
+                            >
+                              {item?.title}
+                            </Typography>
+                            <Typography
+                              color="text.secondary"
+                              sx={{
+                                display: "-webkit-box",
+                                overflow: "hidden",
+                                WebkitBoxOrient: "vertical",
+                                WebkitLineClamp: 3,
+                                color: "black",
+                                fontSize: {
+                                  xs: "16px",
+                                  sm: "16px",
+                                  md: "16px",
+                                  lg: "16px",
+                                },
+                                fontWeight: "500",
+                                fontFamily: " 'Mukta', sans-serif",
+                                // textAlign: "justify"
+                              }}
+                              dangerouslySetInnerHTML={createMarkup(
+                                item?.description
+                              )}
+                            />
+                          </Box>
+                        </CardContent>
+                      </CardActionArea>
+                    </Card>
+                  </Grid>
+                ))}
+              </Grid>
+            </LazyLoad>
           </Grid>
-          <Grid item xs={12} sm={12} md={2.9} lg={2.9}></Grid>
+
+          {/* Advertisment */}
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={2.5}
+            lg={2.5}
+            sx={{
+              // backgroundColor: "green",
+              // marginTop:"10px"
+            }}
+          >
+          <Fullpageadvertisement/>
+          </Grid>
+
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={0.4}
+            lg={0.4}
+            // sx={{ backgroundColor: "orange" }}
+          ></Grid>
         </Grid>
 
         <LazyLoad>
-          <Grid container>
+          {/* <Grid container>
             <Grid item xs={12} sm={12} md={0.6} lg={0.6}></Grid>
             <Grid item xs={12} sm={12} md={8.5} lg={8.5}>
               <Grid container spacing={3}>
@@ -576,7 +556,7 @@ const FullNews = () => {
               </Grid>
             </Grid>
             <Grid item xs={12} sm={12} md={2.9} lg={2.9}></Grid>
-          </Grid>
+          </Grid> */}
         </LazyLoad>
       </Box>
     </>

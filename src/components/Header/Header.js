@@ -13,8 +13,11 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import "./Header.css"
+import "./Header.css";
 import { Link, useNavigate } from "react-router-dom";
+
+// IMAGES
+import AjKaSamachar from "../../assets/images/Header/AjjKaSamachaar.png";
 
 import "./Header.css";
 
@@ -69,7 +72,10 @@ function Header(props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" , backgroundColor:"#011e29" , height:"100%"}}>
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{ textAlign: "center", backgroundColor: "#011e29", height: "100%" }}
+    >
       <Typography
         variant="h6"
         sx={{
@@ -77,12 +83,12 @@ function Header(props) {
           fontFamily: " 'Mukta', sans-serif",
           fontWeight: "700",
           fontSize: "25px",
-          color:"#fff"
+          color: "#fff",
         }}
       >
         आज का समाचार
       </Typography>
-      <Divider sx={{backgroundColor:"#fff"}}/>
+      <Divider sx={{ backgroundColor: "#fff" }} />
       <List>
         {navItems.map((item, index) => {
           return (
@@ -99,7 +105,7 @@ function Header(props) {
                       fontFamily: " 'Mukta', sans-serif",
                       fontWeight: "700",
                       fontSize: "20px",
-                      color:"#fff"
+                      color: "#fff",
                     }}
                   >
                     {item?.name}
@@ -149,14 +155,32 @@ function Header(props) {
               variant="h6"
               component="div"
               sx={{
-                fontSize: {xs:"25px" , sm:"25px" , md:"30px" , lg:"30px"},
+                fontSize: { xs: "25px", sm: "25px", md: "30px", lg: "30px" },
                 fontFamily: "'Mukta', sans-serif",
                 fontWeight: "600",
-                marginLeft: {xs:"65px" , sm:"65px" , md:"43px" , lg:"43px"},
+                marginLeft: { xs: "65px", sm: "65px", md: "43px", lg: "43px" },
               }}
             >
               आज का समाचार
             </Typography>
+            {/* <Box
+              component="img"
+              src={AjKaSamachar}
+              sx={{
+                width: {
+                  xs: "",
+                  sm: "",
+                  md: "180px",
+                  lg: "180px",
+                },
+                height: {
+                  xs: "",
+                  sm: "",
+                  md: "100px",
+                  lg: "100px",
+                },
+              }}
+            /> */}
           </Link>
           <Box
             sx={{ display: { xs: "none", sm: "block" }, marginRight: "35px" }}
