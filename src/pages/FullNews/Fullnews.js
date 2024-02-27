@@ -210,7 +210,7 @@ const FullNews = () => {
                     lg: "0px",
                   },
                 }}
-                alt="ArticleImage"
+                alt={FullArticle?.title}
                 src={FullArticle?.photo}
               />
             </Box>
