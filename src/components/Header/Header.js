@@ -17,7 +17,7 @@ import "./Header.css";
 import { Link, useNavigate } from "react-router-dom";
 
 // IMAGES
-import AjKaSamachar from "../../assets/images/Header/AjjKaSamachaar.png";
+import AjKaSamachar from "../../assets/images/Header/ajkasam.png";
 
 import "./Header.css";
 
@@ -76,18 +76,42 @@ function Header(props) {
       onClick={handleDrawerToggle}
       sx={{ textAlign: "center", backgroundColor: "#011e29", height: "100%" }}
     >
-      <Typography
-        variant="h6"
-        sx={{
-          my: 2,
-          fontFamily: " 'Mukta', sans-serif",
-          fontWeight: "700",
-          fontSize: "25px",
-          color: "#fff",
-        }}
-      >
-        आज का समाचार
-      </Typography>
+     <Box
+              component="img"
+              src={AjKaSamachar}
+              sx={{
+                width: {
+                  xs: "90px",
+                  sm: "90px",
+                  md: "110px",
+                  lg: "110px",
+                },
+                height: {
+                  xs: "40px",
+                  sm: "40px",
+                  md: "50px",
+                  lg: "50px",
+                },
+                marginLeft:{
+                  xs: "10px",
+                  sm: "10px",
+                  md: "40px",
+                  lg: "40px",
+                },
+                marginTop:{
+                  xs: "5px",
+                  sm: "5px",
+                  // md: "40px",
+                  // lg: "40px",
+                },
+                marginBottom:{
+                  xs: "5px",
+                  sm: "5px",
+                  // md: "40px",
+                  // lg: "40px",
+                }
+              }}
+            />
       <Divider sx={{ backgroundColor: "#fff" }} />
       <List>
         {navItems.map((item, index) => {
@@ -151,7 +175,7 @@ function Header(props) {
               ...buttonHoverStyle,
             }}
           >
-            <Typography
+            {/* <Typography
               variant="h6"
               component="div"
               sx={{
@@ -162,25 +186,31 @@ function Header(props) {
               }}
             >
               आज का समाचार
-            </Typography>
-            {/* <Box
+            </Typography> */}
+            <Box
               component="img"
               src={AjKaSamachar}
               sx={{
                 width: {
-                  xs: "",
-                  sm: "",
-                  md: "180px",
-                  lg: "180px",
+                  xs: "90px",
+                  sm: "90px",
+                  md: "110px",
+                  lg: "110px",
                 },
                 height: {
-                  xs: "",
-                  sm: "",
-                  md: "100px",
-                  lg: "100px",
+                  xs: "40px",
+                  sm: "40px",
+                  md: "50px",
+                  lg: "50px",
                 },
+                marginLeft:{
+                  xs: "65px",
+                  sm: "65px",
+                  md: "40px",
+                  lg: "40px",
+                }
               }}
-            /> */}
+            />
           </Link>
           <Box
             sx={{ display: { xs: "none", sm: "block" }, marginRight: "35px" }}

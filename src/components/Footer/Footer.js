@@ -17,6 +17,8 @@ import instaLogo from "../../assets/images/instagram2.png";
 import fbLogo from "../../assets/images/facebook2.png";
 import "./Footer.css";
 
+import ajkasamachar from "../../assets/images/Header/ajkasam.png"
+
 function Footer() {
   const { Articles } = useSelector((state) => state.HomeReducer);
   const navigate = useNavigate();
@@ -1034,8 +1036,8 @@ function Footer() {
                   // justifyContent:"center",
                   // alignItems:"center",
                   marginTop: {
-                    xs: "20px",
-                    sm: "20px",
+                    xs: "30px",
+                    sm: "30px",
                     md: "60px",
                     lg: "60px",
                   },
@@ -1047,7 +1049,7 @@ function Footer() {
                   },
                 }}
               >
-                <Box>
+                {/* <Box>
                   <Typography
                     variant="h6"
                     component="div"
@@ -1065,7 +1067,32 @@ function Footer() {
                   >
                     आज का समाचार
                   </Typography>
-                </Box>
+                </Box> */}
+                <Box
+              component="img"
+              src={ajkasamachar}
+              sx={{
+                width: {
+                  xs: "90px",
+                  sm: "90px",
+                  md: "150px",
+                  lg: "150px",
+                },
+                height: {
+                  xs: "40px",
+                  sm: "40px",
+                  md: "70px",
+                  lg: "70px",
+                },
+                marginLeft:{
+                  xs: "30px",
+                  sm: "30px",
+                  md: "0px",
+                  lg: "0px",
+                }
+              }}
+            />
+
                 <Box
                   sx={{
                     display: "flex",
