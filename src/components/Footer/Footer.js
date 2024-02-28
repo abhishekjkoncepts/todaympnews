@@ -1033,20 +1033,15 @@ function Footer() {
                 sx={{
                   display: "flex",
                   flexDirection: "column",
-                  // justifyContent:"center",
-                  // alignItems:"center",
+                  justifyContent:"center",
+                  alignItems:"center",
                   marginTop: {
                     xs: "30px",
                     sm: "30px",
                     md: "60px",
                     lg: "60px",
                   },
-                  paddingLeft: {
-                    xs: "90px",
-                    sm: "90px",
-                    md: "40px",
-                    lg: "40px",
-                  },
+                 
                 }}
               >
                 {/* <Box>
@@ -1084,12 +1079,12 @@ function Footer() {
                   md: "70px",
                   lg: "70px",
                 },
-                marginLeft:{
-                  xs: "30px",
-                  sm: "30px",
-                  md: "0px",
-                  lg: "0px",
-                }
+                // marginLeft:{
+                //   xs: "30px",
+                //   sm: "30px",
+                //   md: "0px",
+                //   lg: "0px",
+                // }
               }}
             />
 

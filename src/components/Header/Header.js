@@ -192,20 +192,20 @@ function Header(props) {
               src={AjKaSamachar}
               sx={{
                 width: {
-                  xs: "90px",
-                  sm: "90px",
+                  xs: "100px",
+                  sm: "100px",
                   md: "110px",
                   lg: "110px",
                 },
                 height: {
-                  xs: "40px",
-                  sm: "40px",
+                  xs: "50px",
+                  sm: "50px",
                   md: "50px",
                   lg: "50px",
                 },
-                marginLeft:{
-                  xs: "65px",
-                  sm: "65px",
+                marginLeft :{
+                  xs: "80px",
+                  sm: "80px",
                   md: "40px",
                   lg: "40px",
                 }
