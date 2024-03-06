@@ -5,6 +5,7 @@ import { Box, Container, Grid, Typography } from "@mui/material";
 
 // REACT-ROUTER-DOM
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // REDUX
 import { getArticles } from "../../redux/actions/Home";
@@ -41,8 +42,8 @@ const Footer2 = () => {
                   paddingBottom: {
                     xs: "10px",
                     sm: "10px",
-                    md: "50px",
-                    lg: "50px",
+                    md: "20px",
+                    lg: "20px",
                   },
                   paddingLeft: {
                     xs: "40px",
@@ -392,8 +393,8 @@ const Footer2 = () => {
                   paddingBottom: {
                     xs: "20px",
                     sm: "20px",
-                    md: "50px",
-                    lg: "50px",
+                    md: "20px",
+                    lg: "20px",
                   },
                   paddingLeft: {
                     xs: "40px",
@@ -438,7 +439,20 @@ const Footer2 = () => {
                           cursor: "pointer",
                         }}
                         onClick={() => {
-                          navigate("/breaking-news");
+                          console.log(
+                            Articles?.filter(
+                              (item) => item.subcategory[0] === "bjp"
+                            ),
+                            "BJPpppppp"
+                          );
+                          // navigate('/elections/politics/bjp', { state: { data: Articles?.filter(item => item.subcategory[0] === "bjp") } });
+                          navigate("/election/bjp", {
+                            state: {
+                              data: Articles?.filter(
+                                (item) => item.subcategory[0] === "bjp"
+                              ),
+                            },
+                          });
                         }}
                       >
                         बीजेपी
@@ -476,7 +490,20 @@ const Footer2 = () => {
                           cursor: "pointer",
                         }}
                         onClick={() => {
-                          navigate("/elections");
+                          console.log(
+                            Articles?.filter(
+                              (item) => item.subcategory[0] === "shiv-sena"
+                            ),
+                            "BJPpppppp"
+                          );
+                          // navigate('/elections/politics/shivsena', { state: { data: Articles?.filter(item => item.subcategory[0] === "shiv sena") } });
+                          navigate("/election/shiv-sena", {
+                            state: {
+                              data: Articles?.filter(
+                                (item) => item.subcategory[0] === "shiv-sena"
+                              ),
+                            },
+                          });
                         }}
                       >
                         शिव सेना
@@ -517,7 +544,20 @@ const Footer2 = () => {
                           cursor: "pointer",
                         }}
                         onClick={() => {
-                          navigate("/elections");
+                          console.log(
+                            Articles?.filter(
+                              (item) => item.subcategory[0] === "congress"
+                            ),
+                            "congressssss"
+                          );
+                          // navigate('/elections/politics/congress', { state: { data: Articles?.filter(item => item.subcategory[0] === "congress") } });
+                          navigate("/election/congress", {
+                            state: {
+                              data: Articles?.filter(
+                                (item) => item.subcategory[0] === "congress"
+                              ),
+                            },
+                          });
                         }}
                       >
                         कांग्रेस
@@ -555,7 +595,20 @@ const Footer2 = () => {
                           cursor: "pointer",
                         }}
                         onClick={() => {
-                          navigate("/education");
+                          console.log(
+                            Articles?.filter(
+                              (item) => item.subcategory[0] === "samajwadi"
+                            ),
+                            "BJPpppppp"
+                          );
+                          // navigate('/elections/politics/samajwadi', { state: { data: Articles?.filter(item => item.subcategory[0] === "samajwadi") } });
+                          navigate("/election/samajwadi", {
+                            state: {
+                              data: Articles?.filter(
+                                (item) => item.subcategory[0] === "samajwadi"
+                              ),
+                            },
+                          });
                         }}
                       >
                         समाजवादी
@@ -596,7 +649,20 @@ const Footer2 = () => {
                           cursor: "pointer",
                         }}
                         onClick={() => {
-                          navigate("/technology");
+                          console.log(
+                            Articles?.filter(
+                              (item) => item.subcategory[0] === "congress"
+                            ),
+                            "congressssss"
+                          );
+                          // navigate('/elections/politics/congress', { state: { data: Articles?.filter(item => item.subcategory[0] === "congress") } });
+                          navigate("/election/dmk", {
+                            state: {
+                              data: Articles?.filter(
+                                (item) => item.subcategory[0] === "dmk"
+                              ),
+                            },
+                          });
                         }}
                       >
                         डीएमके
@@ -634,7 +700,22 @@ const Footer2 = () => {
                           cursor: "pointer",
                         }}
                         onClick={() => {
-                          navigate("/entertainment");
+                          console.log(
+                            Articles?.filter(
+                              (item) =>
+                                item.subcategory[0] === "aam-aadmi-party"
+                            ),
+                            "aam-aadmi-party"
+                          );
+                          // navigate('/elections/politics/others', { state: { data: Articles?.filter(item => item.subcategory[0] === "other") } });
+                          navigate("/election/aam-aadmi-party", {
+                            state: {
+                              data: Articles?.filter(
+                                (item) =>
+                                  item.subcategory[0] === "aam-aadmi-party"
+                              ),
+                            },
+                          });
                         }}
                       >
                         आम आदमी पार्टी
@@ -672,25 +753,28 @@ const Footer2 = () => {
                 }}
               >
                 <Box>
-                  <Box
-                    component="img"
-                    src={ajkasamachar}
-                    sx={{
-                      width: {
-                        xs: "100px",
-                        sm: "100px",
-                        md: "110px",
-                        lg: "110px",
-                      },
-                      height: {
-                        xs: "50px",
-                        sm: "50px",
-                        md: "50px",
-                        lg: "50px",
-                      },
-                    }}
-                  />
+                  <Link to={"/"}>
+                    <Box
+                      component="img"
+                      src={ajkasamachar}
+                      sx={{
+                        width: {
+                          xs: "100px",
+                          sm: "100px",
+                          md: "110px",
+                          lg: "110px",
+                        },
+                        height: {
+                          xs: "50px",
+                          sm: "50px",
+                          md: "50px",
+                          lg: "50px",
+                        },
+                      }}
+                    />
+                  </Link>
                 </Box>
+
                 <Box
                   sx={{
                     display: "flex",
