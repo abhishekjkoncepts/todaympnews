@@ -33,8 +33,8 @@ const Footer2 = () => {
               <Box
                 sx={{
                   paddingTop: {
-                    xs: "20px",
-                    sm: "20px",
+                    xs: "40px",
+                    sm: "40px",
                     md: "50px",
                     lg: "50px",
                   },
@@ -98,8 +98,8 @@ const Footer2 = () => {
                       sx={{
                         borderLeft: "5px solid red",
                         marginLeft: {
-                          xs: "160px",
-                          sm: "160px",
+                          xs: "140px",
+                          sm: "140px",
                           md: "111px",
                           lg: "111px",
                         },
@@ -177,8 +177,8 @@ const Footer2 = () => {
                       sx={{
                         borderLeft: "5px solid red",
                         marginLeft: {
-                          xs: "186px",
-                          sm: "186px",
+                          xs: "166px",
+                          sm: "166px",
                           md: "140px",
                           lg: "140px",
                         },
@@ -256,8 +256,8 @@ const Footer2 = () => {
                       sx={{
                         borderLeft: "5px solid red",
                         marginLeft: {
-                          xs: "164px",
-                          sm: "164px",
+                          xs: "144px",
+                          sm: "144px",
                           md: "116px",
                           lg: "116px",
                         },
@@ -335,8 +335,8 @@ const Footer2 = () => {
                       sx={{
                         borderLeft: "5px solid red",
                         marginLeft: {
-                          xs: "198px",
-                          sm: "1980px",
+                          xs: "178px",
+                          sm: "178px",
                           md: "153px",
                           lg: "153px",
                         },
@@ -449,8 +449,8 @@ const Footer2 = () => {
                       sx={{
                         borderLeft: "5px solid red",
                         marginLeft: {
-                          xs: "186px",
-                          sm: "186px",
+                          xs: "166px",
+                          sm: "166px",
                           md: "111px",
                           lg: "111px",
                         },
@@ -528,8 +528,8 @@ const Footer2 = () => {
                       sx={{
                         borderLeft: "5px solid red",
                         marginLeft: {
-                          xs: "186px",
-                          sm: "186px",
+                          xs: "166px",
+                          sm: "166px",
                           md: "111px",
                           lg: "111px",
                         },
@@ -607,8 +607,8 @@ const Footer2 = () => {
                       sx={{
                         borderLeft: "5px solid red",
                         marginLeft: {
-                          xs: "180px",
-                          sm: "180px",
+                          xs: "160px",
+                          sm: "160px",
                           md: "105px",
                           lg: "105px",
                         },
@@ -676,17 +676,17 @@ const Footer2 = () => {
                     component="img"
                     src={ajkasamachar}
                     sx={{
+                      width: {
+                        xs: "100px",
+                        sm: "100px",
+                        md: "110px",
+                        lg: "110px",
+                      },
                       height: {
                         xs: "50px",
                         sm: "50px",
-                        md: "70px",
-                        lg: "70px",
-                      },
-                      width: {
-                        xs: "140px",
-                        sm: "140px",
-                        md: "150px",
-                        lg: "150px",
+                        md: "50px",
+                        lg: "50px",
                       },
                     }}
                   />

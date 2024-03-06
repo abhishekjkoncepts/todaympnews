@@ -29,6 +29,7 @@ const buttonHoverStyle = {
 };
 
 const drawerWidth = 240;
+// eslint-disable-next-line no-sparse-arrays
 const navItems = [
   {
     to: "/breaking-news",
@@ -76,42 +77,42 @@ function Header(props) {
       onClick={handleDrawerToggle}
       sx={{ textAlign: "center", backgroundColor: "#011e29", height: "100%" }}
     >
-     <Box
-              component="img"
-              src={AjKaSamachar}
-              sx={{
-                width: {
-                  xs: "90px",
-                  sm: "90px",
-                  md: "110px",
-                  lg: "110px",
-                },
-                height: {
-                  xs: "40px",
-                  sm: "40px",
-                  md: "50px",
-                  lg: "50px",
-                },
-                marginLeft:{
-                  xs: "10px",
-                  sm: "10px",
-                  md: "40px",
-                  lg: "40px",
-                },
-                marginTop:{
-                  xs: "5px",
-                  sm: "5px",
-                  // md: "40px",
-                  // lg: "40px",
-                },
-                marginBottom:{
-                  xs: "5px",
-                  sm: "5px",
-                  // md: "40px",
-                  // lg: "40px",
-                }
-              }}
-            />
+      <Box
+        component="img"
+        src={AjKaSamachar}
+        sx={{
+          width: {
+            xs: "90px",
+            sm: "90px",
+            md: "110px",
+            lg: "110px",
+          },
+          height: {
+            xs: "40px",
+            sm: "40px",
+            md: "50px",
+            lg: "50px",
+          },
+          marginLeft: {
+            xs: "10px",
+            sm: "10px",
+            md: "40px",
+            lg: "40px",
+          },
+          marginTop: {
+            xs: "5px",
+            sm: "5px",
+            // md: "40px",
+            // lg: "40px",
+          },
+          marginBottom: {
+            xs: "5px",
+            sm: "5px",
+            // md: "40px",
+            // lg: "40px",
+          },
+        }}
+      />
       <Divider sx={{ backgroundColor: "#fff" }} />
       <List>
         {navItems.map((item, index) => {
@@ -203,12 +204,12 @@ function Header(props) {
                   md: "50px",
                   lg: "50px",
                 },
-                marginLeft :{
+                marginLeft: {
                   xs: "80px",
                   sm: "80px",
                   md: "40px",
                   lg: "40px",
-                }
+                },
               }}
             />
           </Link>
