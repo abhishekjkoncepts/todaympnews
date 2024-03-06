@@ -33,7 +33,6 @@ import Scrolltotop from "../pages/ScrollToTop/Scrolltotop";
 
 // FOOTER
 import Footer from "../components/Footer/Footer";
-import Footer2 from "../components/Footer/Footer2";
 
 const Navigation = () => {
   return (
@@ -65,8 +64,7 @@ const Navigation = () => {
           <Route path="/election/:param1?" element={<ElectionsSubcategory />} />
         </Routes>
       </Scrolltotop>
-      {/* <Footer/> */}
-      <Footer2/>
+      <Footer />
     </BrowserRouter>
   );
 };
