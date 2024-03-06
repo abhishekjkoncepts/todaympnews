@@ -25,7 +25,6 @@ import JanusAdd from "../../assets/images/Janus.jpg";
 import R2 from "../../assets/images/R2.png";
 import janusAdver from "../../assets/images/JanusAdvertisement.jpeg";
 
-
 import Fullpageadvertisement from "../FullPageAdvertisement/Fullpageadvertisement";
 // LAZY-LOAD
 import LazyLoad from "react-lazyload";
@@ -300,7 +299,7 @@ const FullNews = () => {
             </Box>
 
             <LazyLoad>
-              <Grid container spacing={1}>
+              <Grid container >
                 {RelatedArticles?.data?.map((item, index) => (
                   <Grid
                     item
@@ -320,14 +319,14 @@ const FullNews = () => {
                       paddingLeft: {
                         xs: "10px",
                         sm: "10px",
-                        md: "0px",
-                        lg: "0px",
+                        md: "5px",
+                        lg: "5px",
                       },
                       paddingRight: {
                         xs: "10px",
                         sm: "10px",
-                        md: "0px",
-                        lg: "0px",
+                        md: "5px",
+                        lg: "5px",
                       },
                       marginBottom: {
                         xs: "10px",
@@ -335,19 +334,19 @@ const FullNews = () => {
                         md: "10px",
                         lg: "10px",
                       },
-                      display:"flex",
-                      justifyContent:{
-                        xs:"center",
-                        sm:"center",
-                        md:"none",
-                        lg:"none"
+                      display: "flex",
+                      justifyContent: {
+                        xs: "center",
+                        sm: "center",
+                        md: "none",
+                        lg: "none",
                       },
-                      alignItems:{
-                        xs:"center",
-                        sm:"center",
-                        md:"none",
-                        lg:"none"
-                      }
+                      alignItems: {
+                        xs: "center",
+                        sm: "center",
+                        md: "none",
+                        lg: "none",
+                      },
                       // backgroundColor:"grey"
                     }}
                   >
@@ -427,12 +426,14 @@ const FullNews = () => {
             sm={12}
             md={2.5}
             lg={2.5}
-            sx={{
-              // backgroundColor: "green",
-              // marginTop:"10px"
-            }}
+            sx={
+              {
+                // backgroundColor: "green",
+                // marginTop:"10px"
+              }
+            }
           >
-          <Fullpageadvertisement/>
+            <Fullpageadvertisement />
           </Grid>
 
           <Grid

@@ -18,6 +18,7 @@ import fbLogo from "../../assets/images/facebook2.png";
 import "./Footer.css";
 
 import ajkasamachar from "../../assets/images/Header/ajkasam.png"
+import FooterLine from "./FooterLine";
 
 function Footer() {
   const { Articles } = useSelector((state) => state.HomeReducer);
@@ -1187,36 +1188,7 @@ function Footer() {
         ></Grid>
       </Grid>
 
-      <Grid container>
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={12}
-          lg={12}
-          sx={{ backgroundColor: "#011e29" }}
-        >
-          <Link
-            style={{ textDecoration: "none" }}
-            href="https://www.todaympnews.com/"
-          >
-            <Typography
-              variant="body2"
-              color="text.secondary"
-              align="center"
-              sx={{
-                paddingTop: "10px",
-                paddingBottom: "10px",
-                color: "#fff",
-                cursor: "pointer",
-              }}
-            >
-              © Todaympnews | All Rights Reserved {" "}
-              {new Date().getFullYear()}
-            </Typography>
-          </Link>
-        </Grid>
-      </Grid>
+      <FooterLine/>
     </>
   );
 }
