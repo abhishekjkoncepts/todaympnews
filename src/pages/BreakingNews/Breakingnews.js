@@ -63,10 +63,20 @@ const Breakingnews = () => {
                   >
                     <Typography
                       sx={{
-                        fontSize:{ xs:"16px" , sm:"16px" , md:"17px" , lg:"17px"} ,
+                        fontSize: {
+                          xs: "16px",
+                          sm: "16px",
+                          md: "17px",
+                          lg: "17px",
+                        },
                         fontWeight: "600",
                         marginTop: "2px",
-                        marginLeft:{ xs:"5px" , sm:"5px" , md:"0px" , lg:"0px"} ,
+                        marginLeft: {
+                          xs: "5px",
+                          sm: "5px",
+                          md: "0px",
+                          lg: "0px",
+                        },
                       }}
                     >
                       {new Date(result?.createdAt).toLocaleTimeString([], {
@@ -95,12 +105,27 @@ const Breakingnews = () => {
                       }}
                       sx={{
                         fontSize: "20px",
-                        fontSize:{xs:"15px" , sm:"15px" , md:"20px" , lg:"20px"},
+                        fontSize: {
+                          xs: "15px",
+                          sm: "15px",
+                          md: "20px",
+                          lg: "20px",
+                        },
                         fontWeight: "600",
                         fontFamily: " 'Mukta', sans-serif",
                         color: "#D2122E",
-                        marginLeft:{xs:"5px" , sm:"5px" , md:"0px" , lg:"0px"},
-                        marginRight:{xs:"5px" , sm:"5px" , md:"0px" , lg:"0px"}
+                        marginLeft: {
+                          xs: "5px",
+                          sm: "5px",
+                          md: "0px",
+                          lg: "0px",
+                        },
+                        marginRight: {
+                          xs: "5px",
+                          sm: "5px",
+                          md: "0px",
+                          lg: "0px",
+                        },
                       }}
                     >
                       {result?.title}
