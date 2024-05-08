@@ -131,6 +131,7 @@ const Breakingnewstitle = () => {
                             { state: { data: result } }
                           );
                         }}
+                        
                         sx={{
                           fontSize: "20px",
                           fontSize: {
