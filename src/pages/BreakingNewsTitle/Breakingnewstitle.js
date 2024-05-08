@@ -65,6 +65,7 @@ const Breakingnewstitle = () => {
                 animation: "blink 3s infinite", // Apply the animation
               }}
             >
+            
               <Typography
                 sx={{
                   fontSize: "20px",
