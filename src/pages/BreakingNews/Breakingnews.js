@@ -61,6 +61,7 @@ const Breakingnews = () => {
                     md={1.5}
                     // style={{ backgroundColor: "red" }}
                   >
+                  
                     <Typography
                       sx={{
                         fontSize: {
