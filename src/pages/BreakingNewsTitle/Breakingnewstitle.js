@@ -46,6 +46,7 @@ const Breakingnewstitle = () => {
           lg={10.7}
           //   sx={{ backgroundColor: "green" }}
         >
+
         
           <Box
             sx={{
