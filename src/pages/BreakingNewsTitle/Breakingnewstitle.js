@@ -46,6 +46,7 @@ const Breakingnewstitle = () => {
           lg={10.7}
           //   sx={{ backgroundColor: "green" }}
         >
+        
           <Box
             sx={{
               paddingLeft: { xs: "5px", sm: "5px", md: "0px", lg: "0px" },
@@ -65,7 +66,7 @@ const Breakingnewstitle = () => {
                 animation: "blink 3s infinite", // Apply the animation
               }}
             >
-            
+
               <Typography
                 sx={{
                   fontSize: "20px",
