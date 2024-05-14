@@ -66,7 +66,7 @@ const Breakingnewstitle = () => {
               }}
             >
 
-              <Typography
+              <Typography    
                 sx={{
                   fontSize: "20px",
                   fontFamily: " 'Mukta', sans-serif",
@@ -122,6 +122,7 @@ const Breakingnewstitle = () => {
                   (result, index) =>
                     index < 1 && (
                       <Typography
+
                         key={index}
                         result={result}
                         onClick={() => {
@@ -156,12 +157,12 @@ const Breakingnewstitle = () => {
                             md: "0px",
                             lg: "0px",
                           },
-                          pointer:"cursor",
+                          // pointer:"cursor",
                           cursor:"pointer"
                         }}
                       >
                         {result?.title}
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       </Typography>
                     )
                 )}

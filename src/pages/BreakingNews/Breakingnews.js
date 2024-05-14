@@ -61,8 +61,10 @@ const Breakingnews = () => {
                     sm={12}
                     lg={1.5}
                     md={1.5}
+
                     // style={{ backgroundColor: "red" }}
                   >
+
                   
                     <Typography
                       sx={{
@@ -98,6 +100,7 @@ const Breakingnews = () => {
                   >
                     <Typography
                       key={index}
+
                       result={result}
                       onClick={() => {
                         console.log("navigate");
@@ -112,7 +115,7 @@ const Breakingnews = () => {
                           xs: "15px",
                           sm: "15px",
                           md: "20px",
-                          lg: "20px",
+                          lg: "19px",
                         },
                         fontWeight: "600",
                         fontFamily: " 'Mukta', sans-serif",

@@ -55,6 +55,7 @@ const Elections = () => {
               paddingRight: { xs: "5px", sm: "5px", md: "0px", lg: "0px" },
             }}
           >
+
             <Grid container spacing={3}>
               {Articles?.filter((item) => item.category[0] === "election").map(
                 (result, index) => (
@@ -86,7 +87,7 @@ const Elections = () => {
             <a
               href="www.januskoncpets.com"
               target="_blank"
-              rel="noopener noreferrer"
+              // rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
             >
               <Box
