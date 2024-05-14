@@ -39,7 +39,9 @@ const Breakingnews = () => {
           md={0.6}
           lg={0.6}
           // sx={{ backgroundColor: "red" }}
-        ></Grid>
+        >
+          
+        </Grid>
         <Grid
           item
           xs={12}
